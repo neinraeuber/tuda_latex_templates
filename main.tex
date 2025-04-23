@@ -51,7 +51,7 @@
 	marginpar=false,% Disable marginpar
 %	BCOR=5mm,% Binding correction
 % 	accept-missing-logos=true,% No error in case logo files are not available
-% 	logofile=example-image,% In case logo should be replaced
+ 	logofile=tools/logo-installation/TUDa-logos/tuda_logo.png,% In case logo should be replaced
 ]{tudapub}
 
 
@@ -80,9 +80,9 @@
 %%%%%%%%%%%%%%%%%%%
 % Package suggestions math
 %%%%%%%%%%%%%%%%%%%
-%\usepackage{mathtools}% Extended version of amsmath
-%\usepackage{amssymb}% Additional symbols
-%\usepackage{siunitx}% Numbers and Units
+\usepackage{mathtools}% Extended version of amsmath
+\usepackage{amssymb}% Additional symbols
+\usepackage{siunitx}% Numbers and Units
 
 \hypersetup{% Metadata adjustments, in case these are not set, the data provided for \maketitle will be used
 	pdfauthor=Marei Peischl (peiTeX),
@@ -90,15 +90,14 @@
 	pdfkeywords={TU Darmstadt; Corporate Design; LaTeX}
 }
 
-\title{TUDaThesis -- Theses using TU Darmstadt's CI}
-\subtitle{\LaTeX{} im Corporate Design der TU Darmstadt}
-\author{Marei Peischl}
-\reviewer{Reviewer 1 \and Reviewer 2 \and …}
+\title{Removal of undesired resonances of Terahertz antennas by inclusion of resistive feeds}
+\author{Jakob Schmidt}
+\reviewer{Prof. Dr. rer. nat. Sascha Preu \and M.Sc. Florian Bek}
 
 % The following elements will be placed on the title page
-\department{ce}% If defined the shorthand will be replaced by the full name otherwhise it's used directly.
-\institute{Institute}
-\group{Group}
+\department{etit}% If defined the shorthand will be replaced by the full name otherwhise it's used directly.
+\institute{Institute for Microwave Engineering and Photonics}
+\group{Terahertz Devices and Systems}
 
 \submissiondate{\today}
 \examdate{\today}
@@ -119,13 +118,68 @@
 
 \tableofcontents
 % Additional lists like \listoffigures or acronyms might be added here
+\listoffigures
+\newpage
 
+\chapter{Introduction}
+Terahertz (THz) radiation refers to the electromagnetic spectrum ranging from \num{100} \si{\giga\hertz} up to \num{10} \si{\tera\hertz}. 
 
-\addchap{About this file}
+\section{THz Science Overview (maybe weglassen und einfach unter Intorduction)}
+\section{Motivation}
+\section{Objective and Thesis Outline}
 
-\enquote{DEMO-TUDaThesis.tex} is a basic template for theses using the Corporate Design of TU Darmstadt.
-It is part of TUDa-CI, which is the official template bundle of TU Darmstadt. The original version was inspired by the \enquote{tuddesign} bundle by C.~v.~Loewenich and J.~Werner.
-For more information on class options and usage have a look at the documentation \cite{tuda-ci}.
+\chapter{Theory}
+\section{THz Time Domain Spectroscopy}
+\begin{itemize}
+	\item Emission, Detection using PCAs 
+	\item explain important components (Laser, Delay Stage etc.)
+\end{itemize}
+\section{Antenna Types for TDS ??}
+\begin{itemize}
+	\item irgendwie darauf eingehen, warum nur Slotline und H-Dipole in Frage kommen
+	--> irgendwas mit Dispersion und so (machen Frequenzen würden zB bei LogSpiral länger durchlaufen, andere kürzer) 
+\end{itemize}
+\begin{itemize}
+	\item Slotline vs. H-Dipole; talk about how it is basically only
+	applicable to use those two 
+\end{itemize}
+\section{Pad Resonances, Effects on TDS}
+\begin{itemize}
+	\item plot of resonance in low f 
+	\item explain why this is bad (FFT, Ringing etc.)
+\end{itemize}
+\section{Fourier Transform, Ringing}
+
+\chapter{Antenna Design and Simulation}
+\section{NiCr Arms to reduce Resonances}
+\begin{itemize}
+	\item propose NiCr solution to solve pad resonancy problem 
+	\item target resistances and axpectations
+\end{itemize}
+\section{Pulsed Antenna Design and Simulation}
+\begin{itemize}
+	\item antenna design, dimensions (tabular)
+\end{itemize}
+\section{Simulation Results}
+\begin{itemize}
+	\item quick CST intro 
+	\item many many plots (Contour Plots of Surface Currents at 100 GHz and 1 THz (maybe E-Field as well ?),
+	Radiation Impedance)
+	\item talk about results and expected effects of NiCr Arms 
+\end{itemize}
+
+\chapter{Device Fabrication and DC Characterization}
+\section{Device Fabrication Process}
+\section{DC Characterization ??}
+
+\chapter{Experimental Setup}
+\section{THz TDS setup}
+\section{Alignment ??}
+\section{Data Analysis ??}
+
+\chapter{Results and Discussion}
+
+\chapter{Summary and Outlook}
 
 
 \printbibliography
