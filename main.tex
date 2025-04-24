@@ -66,7 +66,7 @@
 % Bibliography
 %%%%%%%%%%%%%%%%%%%
 \usepackage{biblatex}
-\addbibresource{DEMO-TUDaBibliography.bib}% File name of BibTeX database
+\addbibresource{ref.bib}% File name of BibTeX database
 
 %%%%%%%%%%%%%%%%%%%
 % Package suggestions for tables
@@ -83,6 +83,8 @@
 \usepackage{mathtools}% Extended version of amsmath
 \usepackage{amssymb}% Additional symbols
 \usepackage{siunitx}% Numbers and Units
+
+\usepackage{subcaption}
 
 \hypersetup{% Metadata adjustments, in case these are not set, the data provided for \maketitle will be used
 	pdfauthor=Marei Peischl (peiTeX),
@@ -122,18 +124,20 @@
 \newpage
 
 \chapter{Introduction}
-Terahertz (THz) radiation refers to the electromagnetic spectrum ranging from \num{100} \si{\giga\hertz} up to \num{10} \si{\tera\hertz}. 
+Inbetween the microwave and infrared (IR) frequencies of the electromagnetic spectrum lies Terahertz (THz) radiation (make ref to figure) \cite{zhangIntroductionTHzWave2010}. THz radiation refers to the frequency (wavelength) spectrum ranging from \num{100} \si{\giga\hertz} (\num{3} \si{\milli\meter}) up to \num{10} \si{\tera\hertz} (\num{30} \si{\micro\meter}) \cite{PrinciplesTerahertzScience2009}. While microwave and infrared sources are able to provide high magnitudes of power at those frequencies, there has been a lack of efficient and feasible high power sources in the THz range \cite{perkowitzNavigatingTerahertzGap2020}. This has led to the common reference to the THz range as the \enquote{THz gap} (e.g. see \cite{dhillon2017TerahertzScience2017}, \cite{williamsFillingTHzGap2006}, \cite{zhangAdvancesTerahertzTechnology2021}). THz radiation shows potential in many fields. Thus tremendous efforts have been made in the last two decades to narrow the \enquote{THz gap} \cite{preuTunableContinuouswaveTerahertz2011}. Narrowing the gap has been achieved from both the microwave and the optical side. Advances have been made by extending the high frequency cut-off in purely electronic RF devices, decreasing the lower cut-off frequencies of purely optical IR devices or even by combining the two approaches. \textbf{TODO: citations}.
 
-\section{THz Science Overview (maybe weglassen und einfach unter Intorduction)}
 \section{Motivation}
+
 \section{Objective and Thesis Outline}
 
 \chapter{Theory}
+
 \section{THz Time Domain Spectroscopy}
 \begin{itemize}
 	\item Emission, Detection using PCAs 
 	\item explain important components (Laser, Delay Stage etc.)
 \end{itemize}
+
 \section{Antenna Types for TDS ??}
 \begin{itemize}
 	\item irgendwie darauf eingehen, warum nur Slotline und H-Dipole in Frage kommen
@@ -143,6 +147,7 @@ Terahertz (THz) radiation refers to the electromagnetic spectrum ranging from \n
 	\item Slotline vs. H-Dipole; talk about how it is basically only
 	applicable to use those two 
 \end{itemize}
+
 \section{Pad Resonances, Effects on TDS}
 \begin{itemize}
 	\item plot of resonance in low f 
@@ -168,6 +173,28 @@ Terahertz (THz) radiation refers to the electromagnetic spectrum ranging from \n
 	\item talk about results and expected effects of NiCr Arms 
 \end{itemize}
 
+\begin{figure}[h]
+    \centering
+    \hfill
+    \begin{subfigure}[b]{1.1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/contour_plots/Contour_ref_0.1THz_SC.pdf}
+        \caption{}
+        \label{contour_ref_100GHz}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{1.1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/contour_plots/Contour_ref_1THz_SC.pdf}
+        \caption{}
+        \label{contour_ref_1THz}
+    \end{subfigure}
+    \caption{Different PCAs and their general electrode structures are illustrated. Each antenna is designed with rectangular pads for probing. (a) Dimensions of H-Dipole electrodes. (b) Dimensions of bow-tie electrodes. (c) Dimensions of slotline antenna.}
+    \label{electrodes_main}
+\end{figure}
+
+
+
 \chapter{Device Fabrication and DC Characterization}
 \section{Device Fabrication Process}
 \section{DC Characterization ??}
@@ -181,8 +208,6 @@ Terahertz (THz) radiation refers to the electromagnetic spectrum ranging from \n
 
 \chapter{Summary and Outlook}
 
-
 \printbibliography
 
 \end{document}
-%% End of file `DEMO-TUDaThesis.tex'.
