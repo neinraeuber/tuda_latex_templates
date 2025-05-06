@@ -1,0 +1,20 @@
+Simulation file was kindly provided by Nandi Uttam. He simulated an H-Dipole antenna for his PHD thesis \cite{nandiErAsInAlGaAsPhotoconductors2021}. His design of a H-Dipole antenna is used as our reference. We use his design to change the antenna feed. Instead of only using gold for the feed, NiCr is used partially. 
+
+\subsection{Antenna Topology}
+\textbf{TODO: ersten part checken (kP on das bei mir so stimmt; GENERELL NOCH MAL UMSCHREIBEN !!!!!)}
+
+The antenna structures are deposited over the active material ($\sim$ \num{1.5} \si{\micro\meter}). Below the active material lies the semi-insulating InP substrate ($\sim$ \num{500} \si{\micro\meter}) followed by a \num{6.1} \si{\milli\meter} thick hyper-hemispherical silicon lens for efficient out-coupling of the signal. Simulating the entire large structure with the silicon lens is not feasible as the system will require high computational capabilities and memory. We instead use a technique used in ref. \cite{llombartTHzTimeDomainSensing2012,garufoNortonEquivalentCircuit2018} for performing the antenna simulations. The antenna is placed over the air-substrate interface using the \enquote{open add space boundary} condition in CST. For all the other surfaces the \enquote{open} boundary condition is used which absorbs the EM radiation, replicating the infinite continuity of the material in all directions. In (\textbf{TODO ABBILDUNG}) the topology of the antenna structure employed for the simulation can be seen. The thickness of the substrate (air) is at least one wavelength for all frequencies of interest. The \enquote{lumped element} port has been used for excitation of the on substrate H-dipole antenna structures. For accurate results, the port dimension should be at least five times smaller than the effective wavelength. As the antenna performance is investigated over a broad frequency range (0.1-4.5 THz), this criterion is not fulfilled at higher frequencies (>1.5 THz). However, using the \enquote{distributed} option for lumped port, the simulated results at higher frequencies are in line with theoretically expected results.
+
+\subsection{Geometries to be simulated}
+The length of the NiCr strip defines its resistance. This is why multiple cnofigurations have to be simulated to choose the right lengths for processing. 
+
+\begin{itemize}
+	\item formula for resistance of NiCr strip (eith sheet resistance etc.)
+	\item the i need source for sheet resistance 
+	\item tabular of lengths and corresponding resistances 
+\end{itemize}
+
+
+\begin{itemize}
+	\item antenna design, dimensions (tabular)
+\end{itemize}
