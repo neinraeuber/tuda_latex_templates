@@ -1,8 +1,37 @@
-This work focuses on the usage of H-Dipole antennas in THz-TDS systems. In the previous section, H-Dipoles were describes as suitable for THz-TDS. However, two main problems still remain. 
+We have shown that the spectrum of the emitted power by a THz antenna is influenced by several efficiency factors. Bandwidth is especially limited by RC roll-off and lifetime roll-off. We also discussed why only some antenna topologies are applicable in THz-TDS. In this thesis, only H-Dipole antennas are investigated. The H-Dipole antennas are fabricated with pads that are needed to supply the antennas electrodes with a DC bias voltage. The pads however influence the emitted THz spectrum as will be shown in the following. 
 
-The main part of a H-Dipole antenna is made up of the two neighbouring electrodes with a photoconductive active region inbetween them. When the H-Dipole PCAs are used as emitters, the THz waves are supposed to be transmitted fro
-\begin{itemize}
-    \item depending on whether the PCAs are used as emitters or detectors, describe the wave coupling and the problem with coupling in the pads at low f 
-    \item maybe even when using them as emitters still talk about the detection side because simulations have been done with detectors 
-    \item somehow talk about ringing and the FFT 
-\end{itemize}
+\subsection{Fourier Transformation}
+As described previously, the emitted THz spectrum is obtained by fourier transforming the measured THz signal in the time-domain. The Fourier transform of a real-valued time-domain pulse is a complex-valued frequency-domain spectrum. Analytically this yields \cite{MathematicalMethodsPhysics} 
+\begin{equation}
+    \mathcal{F}\left\{
+        E_{Thz}(t) 
+    \right\} = \beta \int_{-\infty}^{+\infty} E_{THz}(t)e^{i\omega t} = E_{THz}(\omega),
+\end{equation}
+
+where $\beta$ is a normalization factor that may differ depending on the field of study and the algorithm used. For discrete data, the analytical fourier transform cannot be used. In this work, the fast Fourier transform (FFT) is used to obtain the THz spectrum. The FFT is an efficient implementation of the discrete Fourier transformation (DFT). The DFT maps a finite number of measurements $x(n)$ into the frequency domain. Many DFT properties are similar to the analog Fourier transformation. The DFT is defined as \cite{raoFastFourierTransform2010}
+\begin{equation}
+    X^F(k) = \beta \sum_{n = 0}^{N - 1}x(n)e^{\frac{-i2\pi k n}{N}}, \qquad k = 0, 1, ..., N-1, \qquad n = 0, 1, ..., N-1,
+\end{equation}
+
+where $x(n)$ denotes a uniformly sampled sequence and $X^F(k)$ is the $k$-th DFT coefficient. Figure \textbf{TODO: figure for FFT} shows a measured THz trace in the time-domain and its Fourier transformation.
+
+\subsection{Low Frequency Pad Resonances}
+The pads used in the H-Dipole antennas act as DC voltage supplies, biasing the electrodes in order to use the antenna as a THz emitter. The pads are usually not part of the actual radiating element. At low THz frequencies however, the pads influence the emitted THz spectrum. At frequencies around \num{50} - \num{100} \si{\giga \hertz}, the wavelength of the THz radiation is considerably large at \num{3} - \num{6} \si{\milli \meter}. Electromagnetic waves tend to couple most efficiently to structures that are resonant. Resonant in this context means a structure with a width that is a multiple of the EM-waves wavelength (typically those multiples are $\frac{1}{4}$, $\frac{1}{2}$ or \num{1} times the wavelength). The PCAs electrodes are only a few micrometers wide, while the pads are much larger. This results in the THz waves being radiated by the antennas pads rather than the electrodes at low frequencies. The large pads result in large surface currents (\textbf{TODO: ABB für surface current}) which in turn result in a resonant behavior of the antenna at low frequencies (\textbf{TODO: ABB für Resonanz}). 
+
+The low frequency resonances present a major problem. The measured time-domain trace of the THz radiation is dominated by low-frequency waves as they are much larger in amplitude. The higher frequencies we are mainly interested in can not be differentiated from noise as they are outweighed by the low frequency components when calculating the DFT. The high frequency limit of the PCA is thus not only limited by intrinsic roll-off factors and RC roll-off but also by the antenna topology, which is undesirable. In chapter 3, a solution to tackle the low frequency resonance problem is introduced.
+
+\subsection{Low Frequency Harmonics}
+Another unwanted effect at lower frequencies ($\nu < 500$ \si{\giga \hertz}) are resonant harmonics that are observable in the measured THz field. Reflections of non-radiative frequencies within the antenna's finite length feeding strip produce standing waves spaced apart by $\sim$\num{50} \si{\giga \hertz} with an effective wavelength equal to the strip's length. The resonant standing waves exhibit different propagation speeds compared to the emitted THz pulse. The dispersion causes undesired time-harmonic oscillations following the original THz pulse. Especially when investigating highly absorptive materials, these time-harmonic oscillations can make measurements extremely challenging. The actual THz signal may be hard to distinguish from the resonances caused by the standing wave propagation. 
+
+\textbf{TODO: Abb. für Ringing}
+
+
+
+% This work focuses on the usage of H-Dipole antennas in THz-TDS systems. In the previous section, H-Dipoles were describes as suitable for THz-TDS. However, two main problems still remain. 
+
+% The main part of a H-Dipole antenna is made up of the two neighbouring electrodes with a photoconductive active region inbetween them. When the H-Dipole PCAs are used as emitters, the THz waves are supposed to be transmitted fro
+% \begin{itemize}
+%     \item depending on whether the PCAs are used as emitters or detectors, describe the wave coupling and the problem with coupling in the pads at low f 
+%     \item maybe even when using them as emitters still talk about the detection side because simulations have been done with detectors 
+%     \item somehow talk about ringing and the FFT 
+% \end{itemize}
