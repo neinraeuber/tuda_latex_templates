@@ -1,20 +1,31 @@
-Simulation file was kindly provided by Nandi Uttam. He simulated an H-Dipole antenna for his PHD thesis \cite{nandiErAsInAlGaAsPhotoconductors2021}. His design of a H-Dipole antenna is used as our reference. We use his design to change the antenna feed. Instead of only using gold for the feed, NiCr is used partially. 
+Simulations were mainly performed by reusing the simulation file proposed in \cite{nandiErAsInAlGaAsPhotoconductors2021} as a reference for this work. We then replace some part of the original antenna feeding strips by NiCr. The basic simulation steps will be outlined as a short review of \cite{nandiErAsInAlGaAsPhotoconductors2021}.   
 
-\subsection{Antenna Topology}
-\textbf{TODO: ersten part checken (kP on das bei mir so stimmt; GENERELL NOCH MAL UMSCHREIBEN !!!!!)}
+\subsection{Reference Antenna Topology}
 
-The antenna structures are deposited over the active material ($\sim$ \num{1.5} \si{\micro\meter}). Below the active material lies the semi-insulating InP substrate ($\sim$ \num{500} \si{\micro\meter}) followed by a \num{6.1} \si{\milli\meter} thick hyper-hemispherical silicon lens for efficient out-coupling of the signal. Simulating the entire large structure with the silicon lens is not feasible as the system will require high computational capabilities and memory. We instead use a technique used in ref. \cite{llombartTHzTimeDomainSensing2012,garufoNortonEquivalentCircuit2018} for performing the antenna simulations. The antenna is placed over the air-substrate interface using the \enquote{open add space boundary} condition in CST. For all the other surfaces the \enquote{open} boundary condition is used which absorbs the EM radiation, replicating the infinite continuity of the material in all directions. In (\textbf{TODO ABBILDUNG}) the topology of the antenna structure employed for the simulation can be seen. The thickness of the substrate (air) is at least one wavelength for all frequencies of interest. The \enquote{lumped element} port has been used for excitation of the on substrate H-dipole antenna structures. For accurate results, the port dimension should be at least five times smaller than the effective wavelength. As the antenna performance is investigated over a broad frequency range (0.1-4.5 THz), this criterion is not fulfilled at higher frequencies (>1.5 THz). However, using the \enquote{distributed} option for lumped port, the simulated results at higher frequencies are in line with theoretically expected results.
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/H_Dipole_ref.png}
+    \caption{H-Dipole PCA used as reference for simulations in CST Studio Suite. The antennas golden structure sits on top of the green substrate. In between the electrodes sits the lumped element port.}
+    \label{ref_h_dipole_for_sim}
+\end{figure}
+
+The H-Dipole antennas are deposited on the active photoconducting material ($\sim$ \num{1.5} \si{\micro\meter}). Below the active material sits a semi-insulating InP substrate ($\sim$ \num{500} \si{\micro\meter}). Additionally, a hyper-hemispherical silicon lense with a radius of \num{6.1} \si{\milli\meter} is attached to the substrate for efficient out-coupling of the generated THz signal. Simulating the entire structure including the silicon lense would not be feasible as too much computational power would be needed. The simulation is simplified by using a technique described in  ref. \cite{llombartTHzTimeDomainSensing2012,garufoNortonEquivalentCircuit2018}. The antenna is positioned at the air–substrate interface, where the \enquote{open add space} boundary condition is applied in CST. All other boundaries use the \enquote{open} condition, which absorbs electromagnetic radiation and mimics an infinitely extended medium. Figure \ref{ref_h_dipole_for_sim} shows the topology of the reference antenna structure used in the simulation. The substrate thickness is set to at least one wavelength across all relevant frequencies. A lumped element port is used to excite the on-substrate H-dipole antenna. For reliable results, the port dimensions should be at least five times smaller than the effective wavelength. As we only investigate THz performance up to \num{1} \si{\tera\hertz}, this criterion should always be fulfilled. 
+
+\subsection{NiCr-Induced Antenna Topology}
+The reference antenna topology is used to evaluate the THz performance of NiCr-induced feeding strips. Additionally to the described topology, NiCr properties are added. We start by defining NiCr's material properties. NiCr is defined as 
+
+\textbf{TODO: properties aus CST adden}.
+
+In the reference H-Dipole topology, the deposited metal is defined as perfectly electrically conducting (PEC). This is good enough for simulation purposes as gold can be approximated as a perfect conductor of electricity. Some part of the PEC in the antenna feeding strip is now replaced by NiCr. We start inducing the NiCr at the antenna's electrodes. This means that the longer the NiCr-strip, the closer it is to the antenna's pads. Figure (\textbf{TODO: Figure für NiCr Antenna Sim}) shows an example for a H-Dipole antenna where some part of it's feeding structure is replaced by NiCr. 
+
+
 
 \subsection{Geometries to be simulated}
-The length of the NiCr strip defines its resistance. This is why multiple cnofigurations have to be simulated to choose the right lengths for processing. 
+The length $l_{NiCr}$ of the NiCr strip defines its resistance, as $R_{NiCr} \propto l_{NiCr}$. This is why multiple configurations have to be simulated to choose appropriate lengths for processing. 
 
-\begin{itemize}
-	\item formula for resistance of NiCr strip (eith sheet resistance etc.)
-	\item the i need source for sheet resistance 
-	\item tabular of lengths and corresponding resistances 
-\end{itemize}
-
-
-\begin{itemize}
-	\item antenna design, dimensions (tabular)
-\end{itemize}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{figures/H_Dipole_NiCr copy.png}
+    \caption{H-Dipole PCA including a NiCr-section (purple). The antennas golden structure sits on top of the green substrate. In between the electrodes sits the lumped element port.}
+    \label{ref_h_dipole_for_sim}
+\end{figure}

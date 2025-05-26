@@ -49,7 +49,7 @@
 	parskip=half-,% Use a parskip instead of indent, see KOMA-Script documentation
 	custommargins=false,% Calculate margins using typearea
 	marginpar=false,% Disable marginpar
-	BCOR=5mm,% Binding correction
+	BCOR=0mm,% Binding correction
 % 	accept-missing-logos=true,% No error in case logo files are not available
  	logofile=tools/logo-installation/TUDa-logos/tuda_logo.png,% In case logo should be replaced
 ]{tudapub}
@@ -146,17 +146,15 @@
 \section{THz Emitters based on Photoconductive Antennas}
 \input{chapters/Theory/photomixing.tex}
 
-\section{Pad Resonances and their Effects on TDS}
+\section{Pad Resonances and their Effects on THz-TDS}
 \input{chapters/Theory/padResonances.tex}
 
 \chapter{Antenna Design and Simulation}
-\section{NiCr Arms to reduce Resonances}
-\begin{itemize}
-	\item propose NiCr solution to solve pad resonancy problem 
-\end{itemize}
+
+The design of an appropriate antenna structure is vital for achieving the desired bandwidth and THz performance. We use the design for a H-Dipole antenna proposed by Nandi Uttam \cite{nandiErAsInAlGaAsPhotoconductors2021} as our reference. From there, NiCr-sections in the antenna feeding strip are added. Different configurations are evaluated. CST Studio Suite is used for the simulations. Design considerations and simulation results are presented in the following.
+
 \section{Pulsed Antenna Design and Simulation}
 \input{chapters/Antenna Design and Simulation/design.tex}
-
 
 
 \section{Simulation Results}
@@ -166,14 +164,15 @@
 
 \chapter{Device Fabrication and DC Characterization}
 \begin{itemize}
-	\item we grew ErInGas oder so (nur kurz erwähnen, nicht Teil der Arbeit)
-	\item maybe talk about typical features we would expect 
+	\item maybe talk about SC props real quick 
 \end{itemize}
+Two photoconductor wafers that were already grown at the institute were chosen because they showed promising performance in past experiments. The wafers need to be cleaved into appropriate size before various processing steps can be performed. The fabrication process of the H-Dipole antennas that were proposed previously is described. The processed antennas are DC characterized to ensure suitability for usage in THz-TDS experiments. 
 
 
 \section{Device Fabrication Process}
+
 \input{chapters/Device Fabrication and DC Characterization/DeviceFab.tex}
-\section{DC Characterization ??}
+\section{DC Characterization}
 
 \chapter{Experimental Setup}
 \section{THz TDS setup}
