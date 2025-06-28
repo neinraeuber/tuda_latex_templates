@@ -27,7 +27,7 @@ The device fabrication consists of four main processes. Included in these proces
     \caption{Schematic diagram depicting the principle steps of structure lithography and metal deposition. (a) The wafer is covered in AZ 5214E photoresist. (b) UV exposure leaves behind a patterned photoresistive structure. A metal layer is deposited through metal evaporation on top of the photoresistive layer. (c) Lift-off is performed to get rid of the excess metal. Left behind is only the metal in contact with the semiconducting material.}
 \end{figure}
 
-A lithography mask is fabricated containing the desired antenna structures. A \num{7} $\times$ \num{8} \si{\milli\meter} sample of an InGaAs photoconductor, grown on a \num{500} \si{\micro\meter} InP:Fe substrate wafer is cleaved out from the wafer. In the following steps, structures as small as \num{1} \si{\micro\meter} are desired, so good contact and alignment are critical.
+A lithography mask is fabricated containing the desired antenna structures. A \num{7} $\times$ \num{8} \si{\milli\meter} sample of an InGaAs photoconductor, grown on a \num{500} \si{\micro\meter} InP:Fe substrate wafer is cleaved out from the wafer. In the following steps, structures as small as \num{5} \si{\micro\meter} are desired, so good contact and alignment are critical.
 
 % The desired antenna structures are imprinted onto the sample via contact lithography. Structures as small as approximately \num{1} \si{\micro\meter} are desired, so good contact is critical in this process. 
 
@@ -76,8 +76,14 @@ By mesa etching, the active InGaAs layer is removed from the entire sample excep
 \subsection{Antenna Structure Lithography and Deposition of NiCr}
 This step is similar to the metal deposition of Au and Cr. The desired structures are imprinted onto the sample through photo-lithography. The imprinted structures are the missing parts of the feeding strips connecting antenna pads and electrodes. Good contact between the NiCr-strip and the AuCr-strip is vital. Otherwise, THz performance will decrease drastically. We spin coat the sample with nLof 2035 at \num{4000} rpm. The sample is soft baked, exposed to UV light and developed using AZ MIF 720. Left behind are the missing parts of the antenna feeding strips, ready for NiCr deposition.
 
-The NiCr-strips are fabricated through metal deposition. 
-\textbf{TODO: more detail}
+A \num{80}/\num{20} NiCr alloy is deposited onto the sample using flash evaporation. Flash evaporation of \num{80}/\num{20} NiCr involves the rapid heating of the alloy in an evacuated environment (around $10^{-9}$ \si{\bar}). NiCr has a high melting point around \num{1450} \si{\celsius}. The alloy has to be heated rapidly to avoid clumps and bulk melting, assuring a thin, uniform NiCr layer on top of the sample. Constantly adjusting the feed rate of the alloy also helps in avoiding bulking. Ultimately, the deposition rate should be kept around \num{0.3} \si{\angstrom}/\si{\s}. As Nickel and chromium have slightly different melting temperatures it is also vital to make sure that the two metals are evaporated at equal rates. Upon reaching its evaporation temperature, the NiCr vaporizes, travels through the vacuum and condenses onto the sample. Figure \ref{PCA_NICR} depicts a schematic of the antenna structure after flash evaporation of NiCr. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Fabrication/PCA_after_NiCr.pdf}
+    \caption{Schematic side view of a section of a PCA after NiCr deposition. Au and NiCr are deposited at different heights: $h_{Au} \approx 140$ \si{\nano \meter}, $h_{NiCr} \approx 90$ \si{\nano \meter}. Not to scale.}
+    \label{PCA_NICR}
+\end{figure}
 
 \subsection{Anti-Reflection Coating Deposition}
 An anti-reflection coating (ARC) is deposited above the active region. The ARC layer helps improving the transmission of the THz by minimizing reflection \cite{chenAntireflectionImplementationsTerahertz2014} and protects the device from external damage. The ARC is fabricated by growing a silicon nitride (Si\textsubscript{3}N\textsubscript{4}) layer on top of the sample via plasma-enhanced chemical vapor deposition. 
