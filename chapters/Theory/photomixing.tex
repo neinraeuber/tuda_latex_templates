@@ -1,14 +1,16 @@
 Two distinct methods exist for THz generation and detection using ultrafast quantum cascade laser systems. THz radiation can be generated or detected making use of non-linear optics by using crystals with large second-order non-linear susceptibilities \cite{THzSourcesDetectors, kimHighlyNonlinearOptical2021}. By using a photoconductive material and making use of the concept of photomixing, THz waves can also be generated or detected. This thesis will only focus on the photoconductive approach. 
 
 
-A photoconductive antenna (PCA) is a semiconductor device that acts as an optical switch by increasing its conductivity when illuminated. The semiconductor device (photoconductor) features a direct band-gap. Photoconductors are operated with lasers and are based on the principle of photomixing \cite{peytavitTHzPhotomixers2021}. Two interfering laser beams forming an optical beat signal are focused on the photoconductor. When the beat signal's energy level is higher than that of the semiconductor's band-gap energy, free electron-hole pairs are photo-generated. A bias voltage applied to the electrodes of the antenna separates the carriers to create a displacement current. The current oscillates with the envelope of the absorbed laser light, resulting in a THz signal \cite{nandiErAsInAlGaAsPhotoconductors2021}. To emit or detect THz radiation, the switching in a PCA must happen within a subpicosecond timescale. The switch-on time depends on the duration of the laser pulse. The switch-off time is mainly determined by the lifetime of photoexcited carriers in the semiconductor. Both a short laser pulse and a short carrier lifetime are essential for ultrafast switching. High carrier mobility and high breakdown voltage are also important for achieving good material performance. PCAs usually consist of a photomixing device sitting in between the antenna's electrodes. The electrodes help emit or detect the THz signal. The mathematics for THz generation through photomixing are given in the following sections. In this thesis, the PCAs will only be used as emitters. The THz detection side will not be discussed.
+A photoconductive antenna (PCA) is a semiconductor device that acts as an optical switch by increasing its conductivity when illuminated. The semiconductor device (photoconductor) features a direct band-gap. Photoconductors are operated with lasers and are based on the principle of photomixing \cite{peytavitTHzPhotomixers2021}. Two interfering laser beams forming an optical beat signal are focused on the photoconductor. When the beat signal's energy level is higher than that of the semiconductor's band-gap energy, free electron-hole pairs are photo-generated. A bias voltage applied to the electrodes of the antenna separates the carriers to create a displacement current. The current oscillates with the envelope of the absorbed laser light, resulting in a THz signal \cite{nandiErAsInAlGaAsPhotoconductors2021}. To emit or detect THz radiation, the switching in a PCA must happen within a subpicosecond timescale. The switch-on time depends on the duration of the laser pulse. The switch-off time is mainly determined by the lifetime of photoexcited carriers in the semiconductor. Both a short laser pulse and a short carrier lifetime are essential for ultrafast switching. High carrier mobility and high breakdown voltage are also important for achieving good material performance. PCAs usually consist of a photomixing device sitting in between the antenna's electrodes. The electrodes help emit or detect the THz signal. The mathematics for THz generation through photomixing are given in the following sections. 
+
+% In this thesis, the PCAs will only be used as emitters. The THz detection side will not be discussed.
 
 
 
 % Subpicosecond pulses are generated when a femtosecond laser pulse excites carriers in a biased PCA. Usually, such THz emitting PCAs (see Figure~\ref{typPCA}) consist of two metal electrodes sitting on a semiconducting substrate. The electrodes are biased via larger pads that are connected to the electrodes through a thin feeding strip. Femtosecond optical pulses with photon energy larger than the bandgap of the semiconductor generate free electron and hole pairs in between the electrodes. The DC bias creates a static electrical field. Free carriers are accelerated by the field. Simultaneously, the charge density declines because carriers in defect sites are trapped on the time scale of carrier lifetimes. The impulse current arising from the acceleration and decay of free carriers is the source of the subpicosecond pulses of electromagnetic radiation \cite{PrinciplesTerahertzScience2009}. 
 
 \subsection{Principles of Photomixing for Pulsed Operation}
-To explain pulsed operation for THz-TDS, continuos wave (CW) operation (see figure \textbf{ABB einfügen}) is explained beforehand for easier comprehension. This chapter is mainly a review of \cite{nandiErAsInAlGaAsPhotoconductors2021,faridiPulsedFreeSpace2023,preuPrinciplesTHzGeneration2015}.
+To explain pulsed operation for THz-TDS, continuos wave (CW) operation (see figure \textbf{ABB einfügen}) is explained beforehand. The principles of pulsed operation are then derived from CW operation. This chapter is mainly a review of \cite{nandiErAsInAlGaAsPhotoconductors2021,faridiPulsedFreeSpace2023,preuPrinciplesTHzGeneration2015}.
 
 \subsubsection{CW operation}
 CW THz radiation is generated using two CW lasers. The lasers have a difference frequency of $\omega_L = \omega_0 \pm \omega_{THz}$. The photon energy of the lasers has to be higher than the band-gap energy of the photoconductor material: $h\nu_L > E_G$, 
@@ -198,7 +200,7 @@ Considering the nonidealities is important for understanding high frequency limi
 
 Photoconductors may also be used as THz detectors, relying on the same general principles as THz generation. Implementing PCA based THz detectors is explained in the following as a review of \cite{preuPrinciplesTHzGeneration2015,castro-camusPhotoconductiveResponseCorrection2008}. 
 
-An ultrafast laser pulse and a THz signal generated by the same laser signal are focused onto the active region in between the antenna electrodes. The optical pulse of the laser creates free electron-hole pairs that can be converted into a current by applying a bias field. This bias field is provided by the incoming THz signal. The electrical field of the THz signal controls the current flow. As the laser signal and the incoming THz signal incide the active region simultaneously, the photocurrent is given by convolution of the two signals. The generated DC current is heavily dependent on the incoming THz field and the conductivity of the semiconducting material. The latter defines the mode of operation in THz detection. 
+An ultrafast laser pulse and a THz signal generated by the same laser signal are focused onto the active region in between the antenna electrodes. The optical pulse of the laser creates free electron-hole pairs that can be converted into a current by applying a bias field. This bias field is provided by the incoming THz signal. The electrical field of the THz signal controls the current flow. As the laser signal and the incoming THz signal incide the active region simultaneously, the photocurrent is given by convolution of the two signals. The generated DC current is heavily dependent on the incoming THz field and the conductivity of the semiconducting material. The latter defines the mode of operation in THz detection. Photoconductive detectors work in direct sampling or integrating mode. They can also be configured to be used in intermediate sampling modes, depending on the semiconducting properties.
 
 Direct sampling detectors work by exploiting the properties of highly resistive semiconducting materials which exhibit very low charge-carrier lifetimes $\tau_c \ll 1$ \si{\pico \s}. The optically generated charge-carriers are trapped very quickly by scattering and trapping centers in the semiconductor's crystal structure. The generated electron-hole pairs provide a conductivity spike which only lasts as long as the device is illuminated by the laser pulse. In an ideal case, the conductivity spike can be modeled as a delta function. As the generated photocurrent is given by the convolution of the laser pulse and the incoming THz radiation, in this case, it only samples the point of the THz signal that overlaps spatially and temporally with the laser pulse (\textbf{TODO: Abb.}). This means that the incoming THz transient can be reconstructed by changing the temporal overlap $\tau$ between the laser pulse and the THz wave. Assuming the spike in conductivity to be much shorter than the THz signal's transient features, the THz wave is given by
 
@@ -206,23 +208,53 @@ Direct sampling detectors work by exploiting the properties of highly resistive 
 	I(\tau) \propto E_{THz}(t=\tau).
 \end{equation}
 
-Integrating detection occurs in semiconductors with long charge-carrier lifetimes $\tau_c > 1$ \si{\pico \s}. The carrier-lifetime significantly exceeds the duration of the incoming THz transient. As a result, the photoconductive material remains excited well beyond the duration of the THz pulse. The generated photocurrent is ultimately given by the integral over time of the convolution of the transient electrical field and the material conductivity $\sigma(t)$:
+Integrating detection occurs in semiconductors with long charge-carrier lifetimes $\tau_c > 1$ \si{\pico \s}. The carrier lifetime significantly exceeds the duration of the incoming THz transient. As a result, the photoconductive material remains excited well beyond the duration of the THz pulse. The generated photocurrent is ultimately given by the integral over time of the convolution of the transient electrical field and the material conductivity $\sigma(t)$:
 
 \begin{equation}
 	I(\tau) \propto \int_{-\infty}^{+\infty} E_{THz}(t)\sigma(t = \tau)dt.
 	\label{eq_conv_integration_detection}
 \end{equation}
 
+The optically generated current samples the electrical field. 
 By deconvolution of Eq. \ref{eq_conv_integration_detection}, the actual THz field can be obtained, assuming $\sigma(t)$ is known. Assuming $\sigma(t)$ to rise like a step function upon photoexcitation, Eq. \ref{eq_conv_integration_detection} becomes 
 
 \begin{equation}
 	I(\tau) \propto  \int_{\tau}^{+\infty} E_{THz}(t)dt.
+	\label{eq_conv_int_det_2}
 \end{equation}
 
-The THz field can be reconstructed by differentiating the detected photocurrent with respect to time. 
+The THz field can be reconstructed by differentiating the detected photocurrent with respect to time. Eq. \ref{eq_conv_integration_detection} shows that high bandwidth detectors can be fabricated with long carrier lifetime materials. Bandwidth is rather limited by the rise time of the photoconductivity, which is mainly dependent on the duration of the laser pulse. However, for long carrier lifetimes we also integrate over noise as long as the semiconductor is still photoconductive, reducing the overall SNR. A best practice approach for THz pulse detection is to combine direct sampling and integrating detection to achieve high bandwidth with high SNR. 
 
+PCAs which produce the highest SNRs usually have photoconductive lifetimes similar to the duration of a THz transient. The THz field of the sampled photocurrent of such devices however cannot be directly translated via proportionality or differentiation. Thus, a numerical deconvolution approach is proposed in \cite{castro-camusPhotoconductiveResponseCorrection2008}. We can rewrite eq. \ref{eq_conv_int_det_2} as 
 
+\begin{equation}
+		I(\tau) \propto \beta \int_{-\infty}^{+\infty} E_{THz}(t)\Phi(t - \tau)dt,
+		\qquad \beta \propto P_L T_{12} \lambda
+	\label{eq_conv_integration_detection_2}
+\end{equation}
 
+where $\beta$ is a constant dependent on the Fresnel transformation coefficient $T_{12}$ for light from a laser gate beam of center wavelength $\lambda$ and average laser power reaching the semiconductor surface $P_L$. $\Phi(t)$ is the normalized time dependent conductivity which can be expressed by 
+
+\begin{equation}
+	\Phi(t) = \theta(t)e^{-t/\tau_{rec}},
+\end{equation}
+
+where $\theta(t)$ describes a step function. In most THz-TDS systems, the duration of the laser pulse is much shorter than the duration of the THz transient to be measured and the pulse can be approximated as a delta function. Only then does the step-function assumption hold. 
+
+As the generated photocurrent is a measure of the electrical field of the incoming THz signal, Fourier-transforming $I(\tau)$ yields the spectrum of the THz transient
+
+\begin{equation}
+	I(\omega) = \beta E_{THz}(\omega) \Phi(\omega). 
+	\label{eq_FFT_int_det}
+\end{equation}
+
+The time-domain signal of the electrical field is then given by taking the inverse Fourier-transformation of Eq. \ref{eq_FFT_int_det}
+\begin{equation}
+	E_{THz}(t) = \frac{1}{\beta} \mathcal{F}^{-1}\left\{\frac{I(\omega)}{\Phi(\omega)} \right\} =  \frac{1}{\beta} \mathcal{F}^{-1} \left\{I(\omega)(\frac{1}{\tau_c} + i \omega)
+	 \right\}.
+\end{equation}
+
+This deconvolution approach provides an efficient way of extracting the detected THz-field from a sampled photocurrent, only by knowing the recombination lifetime of the charge-carriers $\tau_{rec}$. 
 \subsection{Photoconductive Antennas for THz-TDS}
 THz emitters based on photoconductive antennas usually consist of a small active region sitting in between the antenna's electrodes. The electrodes are connected to DC biasing pads through thin feeding strips (see figure~\ref{typPCA} a)). A femtosecond laser beam is focused onto the active region to create free electron-hole pairs. A hyper-hemispherical silicon lense is added for efficient out-coupling of the generated THz field (see figure \ref{typPCA} b)). 
 
