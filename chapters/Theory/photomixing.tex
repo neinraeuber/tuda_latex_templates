@@ -1,20 +1,20 @@
-Two distinct methods exist for THz generation and detection using ultrafast quantum cascade laser systems. THz radiation can be generated or detected making use of non-linear optics by using crystals with large second-order non-linear susceptibilities \cite{THzSourcesDetectors, kimHighlyNonlinearOptical2021}. By using a photoconductive material and making use of the concept of photomixing, THz waves can also be generated or detected. This thesis will only focus on the photoconductive approach. 
+Two distinct methods exist for THz generation and detection using ultrafast quantum cascade laser systems. THz radiation can be generated or detected by making use of non-linear optics. Non-linear optics exploit crystals with large second-order non-linear susceptibilities \cite{THzSourcesDetectors, kimHighlyNonlinearOptical2021} for THz generation or detection. By using a photoconductive material and utilizing the concept of photomixing, THz waves can also be generated or detected. This thesis will only focus on the photoconductive approach. 
 
-
-A photoconductive antenna (PCA) is a semiconductor device that acts as an optical switch by increasing its conductivity when illuminated. The semiconductor device (photoconductor) features a direct band-gap. Photoconductors are operated with lasers and are based on the principle of photomixing \cite{peytavitTHzPhotomixers2021}. Two interfering laser beams forming an optical beat signal are focused on the photoconductor. When the beat signal's energy level is higher than that of the semiconductor's band-gap energy, free electron-hole pairs are photo-generated. A bias voltage applied to the electrodes of the antenna separates the carriers to create a displacement current. The current oscillates with the envelope of the absorbed laser light, resulting in a THz signal \cite{nandiErAsInAlGaAsPhotoconductors2021}. To emit or detect THz radiation, the switching in a PCA must happen within a subpicosecond timescale. The switch-on time depends on the duration of the laser pulse. The switch-off time is mainly determined by the lifetime of photoexcited carriers in the semiconductor. Both a short laser pulse and a short carrier lifetime are essential for ultrafast switching. High carrier mobility and high breakdown voltage are also important for achieving good material performance. PCAs usually consist of a photomixing device sitting in between the antenna's electrodes. The electrodes help emit or detect the THz signal. The mathematics for THz generation through photomixing are given in the following sections. 
-
-% In this thesis, the PCAs will only be used as emitters. The THz detection side will not be discussed.
-
-
-
-% Subpicosecond pulses are generated when a femtosecond laser pulse excites carriers in a biased PCA. Usually, such THz emitting PCAs (see Figure~\ref{typPCA}) consist of two metal electrodes sitting on a semiconducting substrate. The electrodes are biased via larger pads that are connected to the electrodes through a thin feeding strip. Femtosecond optical pulses with photon energy larger than the bandgap of the semiconductor generate free electron and hole pairs in between the electrodes. The DC bias creates a static electrical field. Free carriers are accelerated by the field. Simultaneously, the charge density declines because carriers in defect sites are trapped on the time scale of carrier lifetimes. The impulse current arising from the acceleration and decay of free carriers is the source of the subpicosecond pulses of electromagnetic radiation \cite{PrinciplesTerahertzScience2009}. 
+A photoconductive antenna (PCA) is a semiconductor device that acts as an optical switch by increasing its conductivity when illuminated. The semiconductor device (photoconductor) features a direct band-gap. Photoconductors are operated with lasers and are based on the principle of photomixing \cite{peytavitTHzPhotomixers2021}. Two interfering laser beams forming an optical beat signal are focused on the photoconductor. When the beat signal's energy level is higher than that of the semiconductor's band-gap energy, free electron-hole pairs are photo-generated. A bias voltage applied to the electrodes of the antenna separates the carriers to create a displacement current. The current oscillates with the envelope of the absorbed laser light, resulting in a THz signal \cite{nandiErAsInAlGaAsPhotoconductors2021}. To emit or detect THz radiation, the switching in a PCA must happen within a subpicosecond timescale. The switch-on time depends on the duration of the laser pulse. The switch-off time is mainly determined by the lifetime of photoexcited carriers in the semiconductor. Both a short laser pulse and a short carrier lifetime are essential for ultrafast switching. High carrier mobility and high breakdown voltage are also important for achieving good material performance. PCAs usually consist of a photomixing device, often called active region, sitting in between the antenna's electrodes. The electrodes help emit or detect the THz signal. The mathematics for THz generation through photomixing are given in the following sections. 
 
 \subsection{Principles of Photomixing for Pulsed Operation}
-To explain pulsed operation for THz-TDS, continuos wave (CW) operation (see figure \textbf{ABB einfügen}) is explained beforehand. The principles of pulsed operation are then derived from CW operation. This chapter is mainly a review of \cite{nandiErAsInAlGaAsPhotoconductors2021,faridiPulsedFreeSpace2023,preuPrinciplesTHzGeneration2015}.
+To explain the principles of pulsed operation for THz-TDS, continuos wave (CW) operation (see Figure \ref{fig:cw_basics}) is explained beforehand. The principles of pulsed operation are then derived from CW operation. This section is mainly a review of \cite{nandiErAsInAlGaAsPhotoconductors2021,faridiPulsedFreeSpace2023,preuPrinciplesTHzGeneration2015}.
+
+\begin{figure}
+	\includegraphics[width=0.85\linewidth]{figures/cw_principles.pdf}
+	\centering
+	\caption{Basic working principle of the continuos wave photomixing process. Two laser signals are heterodyned. The resulting power modulation shows a beat node at the difference frequency $\nu_{THz} = 1/T_{THz}$ of the two signals.}
+	\label{fig:cw_basics}
+\end{figure}
 
 \subsubsection{CW operation}
-CW THz radiation is generated using two CW lasers. The lasers have a difference frequency of $\omega_L = \omega_0 \pm \omega_{THz}$. The photon energy of the lasers has to be higher than the band-gap energy of the photoconductor material: $h\nu_L > E_G$, 
-where $\nu_L = \omega_L / 2\pi$, $h$ is Planck’s constant and $E_G$ is the bandgap energy of the material. The two laser signals are heterodyned (frequency mixed) using a fiber coupler before they are fed into the photoconductor with an optical field of
+CW THz radiation is generated using two CW lasers. The lasers have a difference frequency of $\omega_L = \omega_0 \pm \omega_{THz}$. The photon energy of the lasers has to be higher than the band-gap energy of the photoconducting material: $h\nu_L > E_G$, 
+where $\nu_L = \omega_L / 2\pi$, $h$ is Planck’s constant and $E_G$ is the bandgap energy of the material. The two laser signals are heterodyned. Heterodyning means mixing two signal's frequencies to achieve a resulting signal frequency that is shifted into another frequency range. A fiber coupler is used for feeding the heterodyned signal into the photoconductor with an optical field of
 
 \begin{equation}
 	\vec{E}(t) = \vec{E}_1(t) + \vec{E}_2(t) = \vec{E}_{1,0}e^{i(\omega_L - \omega_{THz}/2)t} + \vec{E}_{2,0}e^{i(\omega_L + \omega_{THz}/2)t - i\phi},
@@ -30,7 +30,7 @@ which can be rewritten in terms of laser power as
 	P_L(t) = P_1 + P_2 + 2\sqrt{P_1 P_2}\cos(\beta)\cos(\omega_{THz}t + \phi), 
 \end{equation}
 
-where $\beta$ is the angle between the polarization of the electric fields. In an ideal photoconductor all laser light is absorbed. This yields in an ideal photocurrent 
+where $\beta$ is the angle between the polarization of the electric fields. In an ideal photoconductor, all laser light is absorbed. This yields an ideal photocurrent 
 \begin{equation}
 	I_{Ph}^{Id}(t) = \frac{eP_L(t)}{h\nu_L} = \frac{e(P_1+P_2)}{h\nu_L} + 2\frac{e\sqrt{P_1P_2}}{h\nu_L}\cos(\beta)\cdot\cos(\omega_{THz}t + \phi),
 	\label{eq_iph}
@@ -61,13 +61,13 @@ The generated photocurrent is fed into a radiating element, usually an antenna. 
 
 \subsubsection{Pulsed Operation}
 
-For pulsed operation, the semiconductor absorbs a short optical pulse. The photocurrent generated by this pulse results in THz radiation when fed into e.g. an antenna. The emitted THz field is proportional to the time derivative of the photocurrent generated by the lasers \cite{preuTunableContinuouswaveTerahertz2011}
+In pulsed operation, the semiconductor absorbs a short optical pulse. The photocurrent generated by this pulse results in THz radiation when fed into a radiating element like an antenna. The emitted THz field is proportional to the time derivative of the photocurrent generated by the lasers \cite{preuTunableContinuouswaveTerahertz2011}
 \begin{equation}
 	E_{THz} \propto \frac{\partial I_{Ph}(t)}{\partial t}.
 \label{eq1}
 \end{equation}
 
-The CW generation of THz radiation can be extended to the pulsed approach. Under pulsed operation multiple laser frequencies are mixed to form a single laser pulse denoted by 
+The CW generation of THz radiation can be extended to the pulsed approach. Under pulsed operation, multiple laser frequencies are mixed to form a single laser pulse denoted by 
 \begin{equation}
 	\vec{E}(t) = \sum_j^n \vec{E}_je^{i(\omega_j t + \phi j)}.
 \label{eq3}
@@ -75,8 +75,8 @@ The CW generation of THz radiation can be extended to the pulsed approach. Under
 Here, $\omega_j = 2 \pi \nu_j$ are the angular frequency components of each electrical field $\vec{E}_j$ and $\phi_j$ are the corresponding phase components. Assuming a typical mode locked femtosecond laser we get the following properties: 
 \renewcommand{\labelenumi}{\alph{enumi})}
 \begin{enumerate}
-	\item The frequency components are equally spaced in the spectral domain: $\nu_j - \nu_{j-1} = R_p$. $R_p$ is the repetition rate of the laser.
-	\item The phase has a fixed relationship that is linear: $\phi_j - \phi_{j-1} = const.$
+	\item The frequency components are equally spaced in the spectral domain: $\nu_j - \nu_{j-1} = R_p$, where $R_p$ is the repetition rate of the laser.
+	\item The phase has a fixed, linear relationship: $\phi_j - \phi_{j-1} = const.$
 \end{enumerate}
 
 The mode locking allows for very short laser pulses in the femtosecond range.
@@ -89,9 +89,7 @@ To obtain the ideal frequency spectrum of the emitted THz field, the signal has 
 
 where $\mathcal{F}\{\cdot \}$ denotes the Fourier transform and $I_{Ph}(\omega)$ is the spectrum of the photocurrent. Ideally, the spectrum of the photocurrent is proportional to the spectral width of the photocurrent. Note that the spectral width $\Delta \omega$ is inversely proportional to the temporal width $\Delta \tau$, resulting in $\Delta \omega \Delta \tau = 0.5$ The optical pulse duration must be shorter than the period of the maximum THz frequency to be obtained. 
 
-Deriving the emitted THz spectrum under pulsed operation is fairly complex and would be beyond the scope of this thesis. Detailed derivations can be found in \cite{preuPrinciplesTHzGeneration2015}. In the following, only some fundamental steps in obtaining the emitted THz field are given.
-
-From eq. \eqref{eq1} we know that the field generated by a radiating structure such as an antenna is proportional to the time-derivative of the current. We also know that the ideal photocurrent is proportional to the total optical power. Assuming a laser beam that shows Gaussian distributed intensity, meaning $\vec{E}_j$ is Gaussian distributed, eq. \eqref{eq3} becomes
+Deriving the emitted THz spectrum under pulsed operation is fairly complex and would be beyond the scope of this thesis. Detailed derivations can be found in \cite{preuPrinciplesTHzGeneration2015}. In the following, only some fundamental steps in obtaining the emitted THz field are given. From eq. \eqref{eq1} we know that the field generated by a radiating structure like an antenna is proportional to the time-derivative of the current. We also know that the ideal photocurrent is proportional to the total optical power. Assuming a laser beam that shows Gaussian distributed intensity, meaning $\vec{E}_j$ is Gaussian distributed, eq. \eqref{eq3} becomes
 \begin{equation}
 	\vec{E}(t) = \vec{A}(t)e^{i\omega_Lt}.
 \label{eq4} 
@@ -102,7 +100,7 @@ $\vec{A}(t)$ denotes the complex envelope of the pulse while $\omega_L$ is the l
 	\vec{A}(t) = \vec{A}_0 e^{\frac{-t^2}{\tau^2}},
 \end{equation}
 
-with $\tau$ being the time domain $1/e^2$ width. The  $1/e^2$ width is the difference of the two points in the Gaussian beam where the intensity falls to $1/e^2 = 0.135$. The Gaussian pulses optical intensity is once again given by
+with $\tau$ being the time-domain $1/e^2$ width. The  $1/e^2$ width is the difference of the two points in the Gaussian beam where the intensity falls to $1/e^2 = 0.135$. The Gaussian pulse's optical intensity is once again given by
 \begin{equation}
 	I_L(t) \sim |\vec{E}_L(t)|^2 = I_{L,0}e^{\frac{-2t^2}{\tau ^2}}.
 \end{equation} 
@@ -139,7 +137,7 @@ In a nonideal PCA, not all laser light is perfectly absorbed. Surface reflection
 	\label{eq_eta_ext}
 \end{equation}
 
-$R$ denotes the reflection coefficient and $\alpha$ is the absorption coefficient of the material. The thickness of the material $d$ is also taken into account. As a result combining eq.~\eqref{eq_eta_ext} eq.~\eqref {eq_gauss} the photocurrent becomes $I_{Ph}(t) = I_{Ph}^{Id}(t) \cdot \eta_{ext}$. In terms of THz power, applying eq. \eqref{eq_thz_pow}, this can be expressed as  
+$R$ denotes the reflection coefficient and $\alpha$ is the absorption coefficient of the material. The thickness of the material $d$ is also taken into account. Combining eq.~\eqref{eq_eta_ext} and eq.~\eqref{eq_gauss}, the photocurrent becomes $I_{Ph}(t) = I_{Ph}^{Id}(t) \cdot \eta_{ext}$. In terms of THz power this can be expressed by applying eq. \eqref{eq_thz_pow}, yielding
 \begin{equation}
 	P_{THz}(\omega) = P_{THz}^{Id} \cdot \eta_{ext}^2 = \frac{1}{2}R_A (I_{Ph}^{Id})^2(\omega)\eta_{ext}^2
 \end{equation}
@@ -148,16 +146,13 @@ $R$ denotes the reflection coefficient and $\alpha$ is the absorption coefficien
 	\centering
 	\includegraphics[width=0.7\textwidth]{figures/eq_circuit_PCA.pdf}
 	\captionsetup{width=\textwidth}
-	\caption{Equivalent circuit for a PCA, consisting of the antenna impedance $Z_A(\omega) = R_A + iB_A(\omega)$, the photoconductive resistance $R_P$ and the photoconductive capacitance $C_P$. The current source $I_Ph(\omega)$ models the generated photocurrent.}
+	\caption{Equivalent circuit for a PCA, consisting of the antenna impedance $Z_A(\omega) = R_A + iB_A(\omega)$, the photoconductive resistance $R_P$ and the photoconductive capacitance $C_P$. The current source $I_{PH}(\omega)$ models the generated photocurrent.}
 	\label{PCA_eq}
 \end{figure}
 
-Using an anti-reflection coating decreases the materials reflectivity $R$ and increases the materials photon absorption $\alpha$. When additionally increasing the materials thickness $d$ , values of $\eta_{ext} \approx 1$ can be reached. Note that typically $\eta_{ext} < 1$. 
+Using an anti-reflection coating decreases the material's reflectivity $R$ and increases the material's photon absorption $\alpha$. When additionally increasing the materials thickness $d$ , values of $\eta_{ext} \approx 1$ can be reached. Note however that typically $\eta_{ext} < 1$. 
 
-
-Two roll-off factors further decrease the emitted THz power, especially at higher frequencies. RC roll-off reflects the influence of the PCAs capacitance and impedance. A PCAs equivalent circuit \cite{fernandezolveraInternationalSystemUnits2019,collinLimitationsTheveninNorton2003} is shown in figure~\ref{PCA_eq}.
-
-The current source $I_{Ph}(\omega)$ models the radiating element of the antenna. In parallel to the radiating element sits the devices capacitance $C_P$ between the antennas electrodes. The resistance $R_P$ describes the photoconductivity $R_P^{-1} = G_P$ in parallel to the radiation resistance of the antenna $R_A$. Not all energy is radiated, some is stored in the susceptance $B_A(\omega)$. For simplicity, the radiation impedance is modelled as purely ohmic, leaving only $R_A$. As normally $R_{P} \gg R_A$, the photoconductive resistance can be neglected.  With the made simplifications, the equivalent circuit represents a typical RC circuit in low-pass filter configuration. At higher frequencies, output power is expected to decrease. The current reaching the antenna is reduced by a factor $(1 + i2\pi \nu_{THz}\tau_{RC})^{-1}$, as can be shown by calculating the transfer function of the simplified equivalent circuit: 
+Two roll-off factors further decrease the emitted THz power, especially at higher frequencies. RC roll-off reflects the influence of the PCAs capacitance and impedance. A PCAs equivalent circuit \cite{fernandezolveraInternationalSystemUnits2019,collinLimitationsTheveninNorton2003} is shown in figure~\ref{PCA_eq}. The current source $I_{PH}(\omega)$ models the radiating element of the antenna. In parallel to the radiating element sits the devices capacitance $C_P$ between the antennas electrodes. The resistance $R_P$ describes the photoconductivity $R_P^{-1} = G_P$ in parallel to the radiation resistance of the antenna $R_A$. Not all energy is radiated, some is stored in the susceptance $B_A(\omega)$. For simplicity, the radiation impedance is modelled as purely ohmic, leaving only $R_A$. Normally $R_{P} \gg R_A$, so the photoconductive resistance can be neglected.  With the made simplifications, the equivalent circuit represents a typical RC circuit in low-pass filter configuration. At higher frequencies, output power is expected to decrease. The current reaching the antenna is reduced by a factor $(1 + i2\pi \nu_{THz}\tau_{RC})^{-1}$, as can be shown by calculating the transfer function of the simplified equivalent circuit: 
 
 \begin{equation}
     H = \frac{Z_{out}}{Z_{in}} = \frac{\frac{1}{i\omega C_P}}{R_A + \frac{1}{i\omega C_P}} = \frac{1}{1 + i\omega R_A C_P} = \frac{1}{1 + i 2\pi \nu_{THz} \tau_{RC}}.    
@@ -178,7 +173,7 @@ Not all electron-hole pairs generated by photon absorption contribute to the pho
 		1 + \frac{\sin(\omega_{Thz}t + \phi)}{\sqrt{1 + (\omega_{Thz} \tau_{rec})^2}}
 	\right],
 \end{align}
-with recombination time $\tau_{rec}$. Both the time dependent THZ part and the DC part of the photocurrent are damped due to the trapping of charge carriers by a factor $g = \tau_{rec} /tau{tr}$. This factor $g \ll 1$ is called the photoconductive gain. The THz part of the photocurrent is further decreased by the lifetime roll-off 
+where $\tau_{rec}$ is the recombination time. Both the time dependent THZ part and the DC part of the photocurrent are damped due to the trapping of charge carriers by a factor $g = \tau_{rec} /tau{tr}$. This factor $g \ll 1$ is called the photoconductive gain. The THz part of the photocurrent is further decreased by the lifetime roll-off 
 \begin{equation}
 	\eta_{LT}(\omega_{THz}) = \frac{1}{1 + (\omega_{THz}\tau_{rec})^2}.
 \end{equation}
@@ -200,9 +195,9 @@ Considering the nonidealities is important for understanding high frequency limi
 
 Photoconductors may also be used as THz detectors, relying on the same general principles as THz generation. Implementing PCA based THz detectors is explained in the following as a review of \cite{preuPrinciplesTHzGeneration2015,castro-camusPhotoconductiveResponseCorrection2008}. 
 
-An ultrafast laser pulse and a THz signal generated by the same laser signal are focused onto the active region in between the antenna electrodes. The optical pulse of the laser creates free electron-hole pairs that can be converted into a current by applying a bias field. This bias field is provided by the incoming THz signal. The electrical field of the THz signal controls the current flow. As the laser signal and the incoming THz signal incide the active region simultaneously, the photocurrent is given by convolution of the two signals. The generated DC current is heavily dependent on the incoming THz field and the conductivity of the semiconducting material. The latter defines the mode of operation in THz detection. Photoconductive detectors work in direct sampling or integrating mode. They can also be configured to be used in intermediate sampling modes, depending on the semiconducting properties.
+An ultrafast laser pulse and a THz signal generated by the same laser signal are focused onto the active region in between the antenna electrodes. The optical pulse of the laser creates free electron-hole pairs that can be converted into a current by applying a bias field. This bias field is provided by the incoming THz signal. The electrical field of the THz signal controls the current flow. As the laser signal and the incoming THz signal incite the active region simultaneously, the photocurrent is given by convolution of the two signals. The generated DC current is heavily dependent on the incoming THz field and the conductivity of the semiconducting material. The latter defines the mode of operation in THz detection. Photoconductive detectors work in direct sampling or integrating mode. They can also be configured to be used in intermediate sampling modes, depending on the semiconducting properties.
 
-Direct sampling detectors work by exploiting the properties of highly resistive semiconducting materials which exhibit very low charge-carrier lifetimes $\tau_c \ll 1$ \si{\pico \s}. The optically generated charge-carriers are trapped very quickly by scattering and trapping centers in the semiconductor's crystal structure. The generated electron-hole pairs provide a conductivity spike which only lasts as long as the device is illuminated by the laser pulse. In an ideal case, the conductivity spike can be modeled as a delta function. As the generated photocurrent is given by the convolution of the laser pulse and the incoming THz radiation, in this case, it only samples the point of the THz signal that overlaps spatially and temporally with the laser pulse (\textbf{TODO: Abb.}). This means that the incoming THz transient can be reconstructed by changing the temporal overlap $\tau$ between the laser pulse and the THz wave. Assuming the spike in conductivity to be much shorter than the THz signal's transient features, the THz wave is given by
+Direct sampling detectors work by exploiting the properties of highly resistive semiconducting materials which exhibit very low charge-carrier lifetimes $\tau_c \ll 1$ \si{\pico \s}. The optically generated charge-carriers are trapped very quickly by scattering and trapping centers in the semiconductor's crystal structure. The generated electron-hole pairs provide a conductivity spike which only lasts as long as the device is illuminated by the laser pulse. In an ideal case, the conductivity spike can be modeled as a delta function. As the generated photocurrent is given by the convolution of the laser pulse and the incoming THz radiation, in this case, it only samples the point of the THz signal that overlaps spatially and temporally with the laser pulse. This means that the incoming THz transient can be reconstructed by changing the temporal overlap $\tau$ between the laser pulse and the THz wave. Assuming the spike in conductivity to be much shorter than the THz signal's transient features, the THz wave is given by
 
 \begin{equation}
 	I(\tau) \propto E_{THz}(t=\tau).
@@ -239,9 +234,7 @@ where $\beta$ is a constant dependent on the Fresnel transformation coefficient 
 	\Phi(t) = \theta(t)e^{-t/\tau_{rec}},
 \end{equation}
 
-where $\theta(t)$ describes a step function. In most THz-TDS systems, the duration of the laser pulse is much shorter than the duration of the THz transient to be measured and the pulse can be approximated as a delta function. Only then does the step-function assumption hold. 
-
-As the generated photocurrent is a measure of the electrical field of the incoming THz signal, Fourier-transforming $I(\tau)$ yields the spectrum of the THz transient
+where $\theta(t)$ describes a step function. In most THz-TDS systems, the duration of the laser pulse is much shorter than the duration of the THz transient to be measured and the pulse can be approximated as a delta function. Only then does the step-function assumption hold. As the generated photocurrent is a measure of the electrical field of the incoming THz signal, Fourier-transforming $I(\tau)$ yields the spectrum of the THz transient
 
 \begin{equation}
 	I(\omega) = \beta E_{THz}(\omega) \Phi(\omega). 
@@ -255,16 +248,33 @@ The time-domain signal of the electrical field is then given by taking the inver
 \end{equation}
 
 This deconvolution approach provides an efficient way of extracting the detected THz-field from a sampled photocurrent, only by knowing the recombination lifetime of the charge-carriers $\tau_{rec}$. 
+
+\begin{figure}[!]
+    \centering
+    \begin{minipage}{0.75\textwidth} 
+        \centering
+        \begin{subfigure}[t]{0.45\textwidth}
+            \centering
+            \includegraphics[height=0.32\textheight]{figures/typ_PCA_antenna.pdf}
+            \caption{\centering}
+            \label{fig:typPCAantenna}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[t]{0.45\textwidth}
+            \centering
+            \includegraphics[height=0.32\textheight]{figures/typ_PCA_bias.pdf}
+            \caption{\centering}
+            \label{fig:typPCAbias}
+        \end{subfigure}
+        \caption{A typical PCA being used as a receiver in a pulsed system. (a) Typical PCA configuration depicting an H-Dipole antenna with a small active region in between the electrodes. (b) The charge carriers in the active region are optically excited by a femtosecond laser pulse. The device sits on top of a silicon lens. Incoming THz radiation is focused by the lens and biases the antenna.}
+        \label{fig:typPCA}
+    \end{minipage}
+\end{figure}
+
 \subsection{Photoconductive Antennas for THz-TDS}
-THz emitters based on photoconductive antennas usually consist of a small active region sitting in between the antenna's electrodes. The electrodes are connected to DC biasing pads through thin feeding strips (see figure~\ref{typPCA} a)). A femtosecond laser beam is focused onto the active region to create free electron-hole pairs. A hyper-hemispherical silicon lense is added for efficient out-coupling of the generated THz field (see figure \ref{typPCA} b)). 
+
+THz antennas based on the photomixing technique usually consist of a small active region sitting in between the antenna's electrodes. For this thesis, the antennas will only be used as recipients for THz radiation. As discussed, PCAs need to be biased externally to emit or detect THz waves. When being used as receivers, the biasing in in PCA is provided by incident THz radiation focused onto the antenna's active region by a hyper-hemispherical silicon lens. A femtosecond laser beam is focused onto the active region as well, creating free electron-hole pairs (see figure~\ref{fig:typPCAbias}).
 
 Typically, PCAs show a radiation resistance $R_A$ of \num{20} - \num{200} \si{\Omega}. The power and bandwidth of THz emission from a PCA vary widely depending on its topology and metal electrode structure. Antenna topologies typically used in CW operation such as logarithmic periodic (log-periodic) antennas \cite{mendisTunableCWTHzSystem2004}, logarithmic spiral (log-spiral) \cite{linRoomtemperatureContinuouswaveTerahertz2025} antennas or bow-tie antennas \cite{PDFBowtieWideband} are usually not applicable in pulsed systems. Especially log-periodic and log-spiral antennas feature high dispersion of the THz pulse due to their long, mainly non resonant arms \cite{fernandezolveraDispersivePropertiesSelfcomplementary2017a}. As the pulse consists of multiple frequency components, the corresponding waves travel through the arms differently. Lower frequency waves are larger in wavelength. Because wavelength is proportional to wave propagation speed, the pulse is distorted because different frequency components radiate at different times. Bow-tie antennas and complementary square spiral antennas \cite{HighPowerGeneration} exhibit lower dispersion. They can enhance the low-frequency components of THz pulses, increasing the dynamic range (DNR). 
 
-Most commonly used in THz-TDS systems are H-Dipole \cite{nandi1550nmDrivenErAs2018} and slotline antennas \cite{kohlhaasPhotoconductiveTerahertzDetectors2019}. H-Dipole antennas and slotline antennas feature very little dispersion. This makes these antennas suitable for pulsed operation as the generated THz pulse is kept shorted and mostly undistorted. Non-dispersive broadband characteristics in combination with the simple antenna design make these antennas the PCAs of choice in many THz-TDS systems. As this thesis only looks at improving the THz performance of PCAs in pulsed operation, only H-Dipole antennas will be considered. 
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.9\textwidth]{figures/typical_PCA.pdf}
-	\caption{A typical PCA is shown. a) The PCA pads are DC biased. The DC bias is fed to the antennas electrodes. b) The charge carriers in between the antennas electrodes are optically excited by a femtosecond laser pulse. On the back of the device sits a silicon Lense (not to scale).}
-	\label{typPCA}
-\end{figure}
+Most commonly used in THz-TDS systems are H-Dipole \cite{nandi1550nmDrivenErAs2018} (see figure \ref{fig:typPCAantenna}) and slotline antennas \cite{kohlhaasPhotoconductiveTerahertzDetectors2019}. H-Dipole antennas and slotline antennas feature very little dispersion. This makes these antennas suitable for pulsed operation as the generated THz pulse is kept shorted and mostly undistorted. Non-dispersive broadband characteristics in combination with the simple antenna design make these antennas the PCAs of choice in many THz-TDS systems. As this thesis only looks at generally improving the THz performance of PCAs in pulsed operation, slotline antennas will not be discussed. Additionally, I-shaped resonant dipole antennas will be investigated as a comparison to H-Dipole antennas. I-shaped dipoles are resonant at $\lambda/2$ of the incident radiation. Similar to H-Dipole antennas and slotline antennas, I-shaped dipoles are expected to feature little dispersion. I-shaped dipoles are expected to be more sensitive at low THz frequencies \cite{nguyenPhotoconductiveDipoleAntennas2017}. 

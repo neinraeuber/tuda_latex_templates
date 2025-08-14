@@ -49,11 +49,10 @@
 	parskip=half-,% Use a parskip instead of indent, see KOMA-Script documentation
 	custommargins=false,% Calculate margins using typearea
 	marginpar=false,% Disable marginpar
-	BCOR=0mm,% Binding correction
+	BCOR = 0mm,% Binding correction
 % 	accept-missing-logos=true,% No error in case logo files are not available
  	logofile=tools/logo-installation/TUDa-logos/tuda_logo.png,% In case logo should be replaced
 ]{tudapub}
-
 
 %%%%%%%%%%%%%%%%%%%
 % Language setup
@@ -63,7 +62,9 @@
 \usepackage[autostyle]{csquotes}% \enquote, to simplify use of quotation marks
 \usepackage{caption} 
 \usepackage{wrapfig}
-\usepackage{ amssymb }
+\usepackage{amssymb}
+\usepackage{booktabs}
+
 
 
 %%%%%%%%%%%%%%%%%%%
@@ -93,9 +94,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18} % You can adjust the version as needed
 
-
 \hypersetup{% Metadata adjustments, in case these are not set, the data provided for \maketitle will be used
-	pdfauthor=Marei Peischl (peiTeX),
 	pdfcreationdate=2024-05-03,
 	pdfkeywords={TU Darmstadt; Corporate Design; LaTeX}
 }
@@ -124,7 +123,7 @@
 %% The easiest way to do this is to use the pdfpages package.
 %%
 %% For compatibility reasons for the other templates, the function is still available.
-%% \affidavit[signature-image={\includegraphics[width=\width,height=1cm]{example-image}}, <there may be additional options here>]
+\affidavit[signature-image={\includegraphics[width=\width,height=1cm]{example-image}}, <there may be additional options here>]
 
 \tableofcontents
 % Additional lists like \listoffigures or acronyms might be added here
@@ -152,46 +151,44 @@ The underlying theory for understanding THz-TDS, the fundamentals of THz generat
 
 
 \section{Pad Resonances and their Effects on THz-TDS}
+\label{sec:padResonances}
 \input{chapters/Theory/padResonances.tex}
 
 \chapter{Antenna Design and Simulation}
 
-The design of an appropriate antenna structure is vital for achieving the desired bandwidth and THz performance. We use the design for a H-Dipole antenna proposed by Nandi Uttam \cite{nandiErAsInAlGaAsPhotoconductors2021} as our reference. From there, NiCr-sections in the antenna feeding strip are added. Different configurations are evaluated. CST Studio Suite is used for the simulations. Design considerations and simulation results are presented in the following.
+The design of an appropriate antenna structure is vital for achieving the desired bandwidth and THz performance. We use the design for a H-Dipole antenna proposed by Uttam Nandi \cite{nandiErAsInAlGaAsPhotoconductors2021} as our reference. From there, NiCr-sections in the antenna feeding strip are added. Different configurations are evaluated. CST Studio Suite is used for the simulations. Design considerations and simulation results are presented in the following.
 
 \section{Pulsed Antenna Design and Simulation}
 \input{chapters/Antenna Design and Simulation/design.tex}
 
-
 \section{Simulation Results}
 \input{chapters/Antenna Design and Simulation/simResults.tex}
+\label{sec:sim_results}
 
 
 
 \chapter{Device Fabrication and DC Characterization}
-A semiconducting wafer that was already grown at the institute was chosen for its excellent photoconductive properties.
-
-\textbf{TODO: name some properties, maybe get data from Florian}
-
-The wafer needs to be cleaved into appropriate size before various processing steps can be performed. The fabrication process of the H-Dipole antennas that were proposed previously is described. The processed antennas are DC characterized to ensure suitability for usage in THz-TDS experiments. 
-
-
-\section{Device Fabrication Process}
-
+A semiconducting wafer available at the institute was selected for its suitability as receiver material in a THz-TDS system. The wafer is cleaved into appropriate size, suitable for performing a wide range of tests, before various processing steps can be performed. The fabrication process of the H-Dipole antennas and I-Shaped Dipole antennas that were proposed previously is described in this chapter.
 \input{chapters/Device Fabrication and DC Characterization/DeviceFab.tex}
-\section{DC Characterization}
-\input{chapters/Device Fabrication and DC Characterization/DC_char.tex}
+
 
 \chapter{Results and Discussion}
 
-\textbf{TODO: rework Intro}
-
-The setup used for Measuring THz radiation using a pulsed system is presented in the following. Measurements of the proposed antennas are evaluated by analyzing anc comparing their transient behavior. 
+The setup used for measuring THz radiation using a pulsed system is presented in the following. Steps taken for data analysis are outlined. The antennas are DC characterized, before the effect of NiCr on antenna performance is evaluated based on important performance factors such as bandwidth, SNR or ringing. 
 
 \section{THz TDS Measurement Setup}
+\label{setup}
 \input{chapters/results/TDS_setup.tex}
+
+\section{Measurement Results}
+\input{chapters/results/results.tex}
 
 
 \chapter{Summary and Outlook}
+
+\appendix
+\chapter{Full Measurement Data}
+\input{chapters/appendix/appendix.tex}
 
 \printbibliography
 
