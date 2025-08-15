@@ -1,6 +1,6 @@
 The described geometries are simulated in CST Studio Suite and evaluated in the following. Simulation results include the electrical field, the magnetic field and the surface current distribution at \num{100} \si{\giga \hertz} and \num{1} \si{\tera \hertz}. Additionally, CST provides the radiation resistances of the antennas for different configurations. 
 
-\subsection{Surface Current Distribution at 100\,GHz}
+\subsection{Surface Current Distribution at 100 GHz}
 
 \begin{figure}[ht]
     \centering
@@ -25,7 +25,7 @@ A NiCr-section equivalent to a resistance of $R_{NiCr} = 300$ \si{\ohm} is added
 
 At $R_{NiCr} = 1000$ \si{\ohm} (see Figure \ref{sc_100ghz_comp} c), the surface current is heavily concentrated around the antenna's electrodes. The surface current distribution in the pads nearly drops to zero. The surface current along the feeding strip appears relatively homogenous, indicating an absence of leaky-wave modes along the axis parallel to the strip and thus a reduction of low frequency time-harmonics. This is the non-resonant low frequency behavior we want to achieve. $R_{NiCr} = 3740$ \si{\ohm} (see Figure \ref{sc_100ghz_comp} d)) is the maximum resistance we can achieve with the chosen simulation parameters of a maximum strip length of $l_{strip} = 1900$ \si{\micro \meter} and a NiCr sheet resistance of \num{22} \si{\ohm/sq}. A very similar surface current distribution compared to figure \ref{sc_100ghz_comp} c) is observable. The surface current along the feeding strip is further reduced and continues to concentrate around the electrodes. 
 
-\subsection{Surface Current Distribution at 1\,THz}
+\subsection{Surface Current Distribution at 1 THz}
 
 It is important that adding the NiCr-section only affects the surface current generated at lower frequencies. At higher frequencies ($\nu > 100$ \si{\giga \hertz}), the coupling of THz radiation into the antenna is expected to occur predominantly at the electrodes due to the decreasing wavelength. Ideally, the NiCr segments should exert minimal influence on the surface currents propagating from the electrodes to the antenna pads. Figure \ref{sc_1thz_comp} shows the simulated surface current distribution at \num{1} \si{\tera \hertz} in the four antenna configurations which were already discussed at \num{100} \si{\giga \hertz}. 
 
@@ -38,7 +38,7 @@ Another way to evaluate the impact of incorporating NiCr into the antenna feedin
 
 \begin{figure}[!]
     \centering
-    \includegraphics[width=0.85\textwidth]{figures/radiation_imp.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/sim_rad_imp_H_Dipoles.pdf}
     \caption{Radiation impedance of H-Dipole antennas with the stated properties at different lengths for the NiCr strip corresponding to different resistances.}
     \label{}
 \end{figure}

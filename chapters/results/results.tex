@@ -45,34 +45,45 @@ Here, $k_b$ is the Boltzmann constant, $T$ is the temperature, and $\Delta \nu$ 
     \label{iv}
 \end{figure}
 
-\subsubsection{Determination of NiCR Resistance}
+\subsubsection{Determination of NiCR Sheet Resistance}
 
-\begin{wrapfigure}{r}{0.5\textwidth} 
+% \begin{wrapfigure}{r}{0.5\textwidth} 
+%     \centering
+%     \captionsetup{width=0.45\textwidth}
+%     \begin{tabular}{|c|c|c|c|c|}
+%         \hline
+%         Sample & R\textsubscript{meas} [\si{\ohm}] & W/L & R\textsubscript{sh} [\si{\ohm}/sq]\\
+%         \hline
+%         H4 & 5439 & 1/2 & 2719.5 \\
+%         H2 & 14402 & 1/4 & 3600.5 \\
+%         H6 & 15300 & 1/6 & 2550.0 \\
+%         H3 & 30625 & 1/28 & 1094.7 \\
+%         H8 & 15369 & 1/28 & 548.9 \\
+%         H7 & 44615 & 1/96 & 464.6 \\
+%         \hline
+%     \end{tabular}
+%     \caption{Calculations of sheet resistances for NiCr segments from measured short-circuit currents.}
+%     \label{tab:sheetres}
+% \end{wrapfigure}
+
+\begin{wrapfigure}{r}{0.5\textwidth} % r = right side, 50% of text width
     \centering
-    \captionsetup{width=0.45\textwidth}
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline
-        Sample & R\textsubscript{meas} [\si{\ohm}] & W/L & R\textsubscript{sh} [\si{\ohm}/sq]\\
-        \hline
-        H4 & 5439 & 1/2 & 2719.5 \\
-        H2 & 14402 & 1/4 & 3600.5 \\
-        H6 & 15300 & 1/6 & 2550.0 \\
-        H3 & 30625 & 1/28 & 1094.7 \\
-        H8 & 15369 & 1/28 & 548.9 \\
-        H7 & 44615 & 1/96 & 464.6 \\
-        \hline
-    \end{tabular}
-    \caption{Calculations of sheet resistances for NiCr segments from measured short-circuit currents.}
-    \label{tab:sheetres}
+    \includegraphics[width=0.49\textwidth]{figures/R_sheet_regression.pdf}
+    \captionsetup{width=0.475\textwidth} % caption matches image width
+    \caption{Linear fit of the measured resistances of NiCr segments introduced to an H-Dipole's feeding strip.}
+    \label{fig:Rsheet:reg}
 \end{wrapfigure}
-By shorting one of the H-Dipoles feeding strips connected to two read-out pads, we can determine the resistance of the NiCr segments. Figure \ref{iv_sc} shows the measured short-circuit dark currents $I_{DC}$ over the applied bias voltage. The H-Dipoles with added NiCr segments are biased from \num{-20}\,\si{\milli \volt} to \num{20}\,\si{\milli \volt}. The H-Dipoles without added NiCr (see \ref{sc_wo_Nicr}) segments are biased from \num{-8}\,\si{\milli \volt} to \num{8}\,\si{\milli \volt} to avoid heating and potential damage. From Figure \ref{sc_wo_Nicr} it can be seen that the influence of the CrAu strip on NiCr resistance calculations is negligible. The resistance of the strip made solely from CrAu measures approx. \num{80}\,\si{\ohm}. The resistances of the NiCr-modified antennas lie in the \num{10}\,\si{\kilo \ohm} range. Using these measurements lets us determine the actual sheet resistance of the \num{80}/\num{20} NiCr alloy that was used in the fabrication process. The sheet resistance $R_{sh}$ is calculated as following: 
+
+By shorting one of the H-Dipoles feeding strips connected to two read-out pads, we can determine the resistance of the NiCr segments. Figure \ref{iv_sc} shows the measured short-circuit dark currents $I_{DC}$ over the applied bias voltage. The H-Dipoles with added NiCr segments are biased from \num{-20}\,\si{\milli \volt} to \num{20}\,\si{\milli \volt}. The H-Dipoles without added NiCr (see \ref{sc_wo_Nicr}) segments are biased from \num{-8}\,\si{\milli \volt} to \num{8}\,\si{\milli \volt} to avoid heating and potential damage. From Figure \ref{sc_wo_Nicr} it can be seen that the influence of the CrAu strip on NiCr resistance calculations is negligible. The resistance of the strip made solely from CrAu measures approx. \num{80}\,\si{\ohm}. The resistances of the NiCr-modified antennas lie in the \num{10}\,\si{\kilo \ohm} range. Using these measurements lets us determine the actual sheet resistance of the \num{80}/\num{20} NiCr alloy that was used in the fabrication process. The measured resistance $R_{meas}$ and sheet resistance $R_{sh}$ of NiCr relate as following: 
 \begin{equation}
-    R_{sh} = R_{meas}\frac{W}{L} = \frac{V_{bias}}{I_{DC}}\frac{W}{L}, 
+    R_{meas} = R_{sh}\frac{L}{W}
 \end{equation}
 
-where $W$ and $L$  are the width and the length of the NiCr segment respectively. Note that $L$ is defined as $L = 2l_{NiCr}$, as one antenna feeding strip contains two NiCr sections. The sheet resistances for each antenna containing NiCr segments are calculated (see Table \ref{tab:sheetres}). To get a more robust estimate of the actual sheet resistance, we take the mean of the calculated values, yielding $R_{sh} \approx 1372.3$\,\si{\ohm}/sq. The calculated sheet resistance lets us approximate the resistance of the NiCr segments in the I-shaped Dipole antennas using $R_{NiCr} = R_{sh}\frac{L}{W}$. As the I-shaped Dipoles cannot be shorted we cannot determine the resistance of the NiCr segments directly.  Approximating the resistance in the I-shaped Dipoles using the calculated sheet resistance gives us insight into the influence of the resistance on THz measurements. 
 
-The measured value differs from the value used in simulations by a factor of \num{62}. The antennas were initially designed assuming a sheet resistance of \num{22}\,\si{\ohm}/sq. The high resistances incorporated into the antennas influence the time-domain measurements as they introduce highly dissipative elements.  The exact reasons for the large discrepancy between expected and actual sheet resistance require further investigation. One contributing factor is the dependence of NiCr sheet resistance on film thickness. The NiCr segments were deposited with a thickness of approx. \num{35}\,\si{\nano \meter}. The sheet resistance of thin films increases exponentially with decreasing film thickness \cite{wittElectromechanicalPropertiesThin1974}. One study of \num{80}/\num{20} NiCr alloys found the sheet resistance at \num{35}\,\si{\nano \meter} to be approx. \num{130}\,\si{\ohm}/sq. Another study reported values of up to \num{175}\,\si{\ohm}/sq. Additional sources of deviation include the evaporation rate and actual NiCR composition \cite{rolkeNichromeThinFilm1981}, as well as the contact resistance between the NiCr and CrAu segments \cite{zhangAnalysisCurrentCrowding2015}. 
+where $W$ and $L$  are the width and the length of the NiCr segment respectively. Note that $L$ is defined as $L = 2l_{NiCr}$, as one antenna feeding strip contains two NiCr sections. The sheet resistances for each antenna containing NiCr segments are 
+are calculated by linearly fitting the measured data (see Figure \ref{fig:Rsheet:reg}). Note that as two antennas with NiCr segments of length \num{70}\,\si{\micro \meter} were measured, the mean of the two measurements is used for further calculations. The linear fit returns the slope of the Resistance over NiCr length, corresponding to the sheet resistance of the NiCr alloy. We get a value of $R_{sh} = 360.5$\,\si{\ohm}/sq, as well as a factor $R_c = 5378.7$\,\si{\ohm}. The goodness of the fit is $R^2 = 0.9402$. The calculated sheet resistance lets us approximate the resistance of the NiCr segments in the I-shaped Dipole antennas using $R_{NiCr} = R_{sh}\frac{L}{W}$. As the I-shaped Dipoles cannot be shorted we cannot determine the resistance of the NiCr segments directly. Approximating the resistance in the I-shaped Dipoles using the calculated sheet resistance gives us insight into the influence of the resistance on THz measurements.
+
+The measured value differs from the value used in simulations by a factor of \num{16}. The antennas were initially designed assuming a sheet resistance of \num{22}\,\si{\ohm}/sq. The high resistances incorporated into the antennas influence the time-domain measurements as they introduce highly dissipative elements. The exact reasons for the discrepancy between expected and actual sheet resistance require further investigation. One contributing factor is the dependence of NiCr sheet resistance on film thickness. The NiCr segments were deposited with a thickness of approx. \num{35}\,\si{\nano \meter}. The sheet resistance of thin films increases exponentially with decreasing film thickness \cite{wittElectromechanicalPropertiesThin1974}. One study of \num{80}/\num{20} NiCr alloys found the sheet resistance at \num{35}\,\si{\nano \meter} to be approx. \num{130}\,\si{\ohm}/sq. Another study reported values of up to \num{175}\,\si{\ohm}/sq. Additional sources of deviation include the evaporation rate and actual NiCR composition \cite{rolkeNichromeThinFilm1981}, as well as the contact resistance between the NiCr and CrAu segments \cite{zhangAnalysisCurrentCrowding2015} The contact resistance was partly accounted for in calculation of the sheet resistance as the correction factor $R_c$. 
 
 \begin{figure}[!]
     \centering
@@ -198,8 +209,19 @@ Figure \ref{comp_d6_d8_d9_time} presents the time-domain data of the reference I
 
 The I-shaped Dipole used as a reference (D6) displays time-harmonic oscillations visible after reception of the main THz pulse (see Figure \ref{comp_d6_d8_d9_time}). The resonant peaks appear to be spaced apart by approx. \num{14}\,\si{\pico \s}, corresponding to a frequency of approx. \num{35}\,\si{\giga \hertz}. Oscillations at multiples of this frequency fit well with simulations and the obtained spectrum from measurements. Simulations of the radiation impedance of I-shaped Dipoles (see appendix) predicted resonances to occur at \num{37}\,\si{\giga \hertz}, \num{108}\,\si{\giga \hertz} and \num{182}\,\si{\giga \hertz}, all of which can be confirmed by looking at the obtained spectrum of D6 (see \ref{comp_d6_d8_d9_spec}). Additionally, a resonant spike at \num{87}\,\si{\giga \hertz} may be attributed to mirroring of a resonance from the THz source to the receiver, as explained earlier. D6 exhibits a bandwidth of \num{2.6}\,\si{\tera \hertz} and a DNR of \num{64}\,\si{\decibel}. 
 
-Time-harmonic oscillations are observed in the time-domain traces of antennas D8 and D9 (\num{70}\,\si{\micro \meter} NiCr and \num{240}\,\si{\micro \meter} NiCr, respectively). The NiCr segments exhibit resistances of \num{38.4}\,\si{\kilo \ohm} for D8 and \num{131.7}\,\si{\kilo \ohm} for D9. The resistive NiCr segments do not damp the resonant oscillations following the main THz pulse. A phase shift happening in D8 is observed at approx. \num{260}\,\si{\pico \s}. The phase of D9 appears to follow that of the reference I-shaped Dipole. The influence of the incorporating NiCr segments on the phase shifts requires further investigation.
+Time-harmonic oscillations are present in the time-domain traces of antennas D8 and D9 (\num{70}\,\si{\micro \meter} NiCr and \num{240}\,\si{\micro \meter} NiCr, respectively). The NiCr segments exhibit resistances of \num{38.4}\,\si{\kilo \ohm} for D8 and \num{131.7}\,\si{\kilo \ohm} for D9. These resistive NiCr segments do not sufficiently damp the resonant oscillations following the main THz pulse. The reference I-shaped Dipole (D6) shows its dominant resonance accompanied by higher-frequency harmonics at integer multiples of that frequency. The spectra of D8 and D9 are dominated almost entirely by their primary low-frequency resonance, with higher-order harmonics being largely suppressed by the incorporation of NiCr. In D8, a phase shift occurs at approx. \num{260}\,\si{\pico \s}. The phase of D9 follows that of the reference I-shaped Dipole. The influence of the incorporation NiCr segments on phase behavior requires further investigation.
 
+The observed oscillations in the normalized, averaged time-domain data of antennas D8 and D9 correspond to resonant peaks in the spectra (see Figure \ref{comp_d6_d8_d9_spec}) of the respective devices. Antenna D9 exhibits resonances at \num{100}\,\si{\giga \hertz} and \num{200}\,\si{\giga \hertz}, as well as a resonance at \num{87}\,\si{\giga \hertz}, which is attributed to a mirroring effect from the THz source. Antenna D8 exhibits a dominant resonance at \num{80}\,\si{\giga \hertz}, followed by smaller resonant peaks spaced approx. \num{80}\,\si{\giga \hertz} apart. No source mirroring is observed in antenna D8. The observed resonances match well with simulations.
+
+Concerning THz performance, D8 and D9 behave similarly. The peak DNR is \num{55}\,\si{\decibel} for D8 and \num{53}\,\si{\decibel} for D9. Both antennas exhibit a bandwidth of approx. \num{2.7}\,\si{\tera \hertz}, slightly exceeding the bandwidth of the reference (D6). The peak DNR of D8 and D9 is \num{10}\,\si{\decibel} lower than that of D6, meaning D6 receives three times more THz power at its peak. Despite this, D8 and D9 show a less severe roll-off, resulting in a flatter spectrum and thus slightly higher bandwidth. This effect is especially observed in D9 (\num{240}\,\si{\micro \meter} NiCr). From its peak DNR to \num{1}\,\si{\tera \hertz}, the received signal drops by only \num{13}\,\si{\decibel}. The power received by D6 drops by \num{16}\,\si{\decibel}. At \num{2.2}\,\si{\tera \hertz}, the spectra of D6, D8 and D9 intersect, confirming that the NiCr-modified antennas suppress low-frequency power but leave high-frequency performance largely unaffected.
+
+The THz performance (see Figure \ref{comp_d6_d5_d7_spec}) of I-shaped Dipoles D5 and D7 (NiCr lengths of \num{500}\,\si{\micro \meter} and \num{721.5}\,\si{\micro \meter}, respectively) differs significantly. D5 shows a peak DNR of \num{67}\,\si{\decibel}, exceeding that of the reference (D6). The peak DNR of D7 is \num{35}\,\si{\decibel}. The maximum THz power received by antenna D7 is only \num{1}/\num{40} of that received by D5 or D6. Less received power in D7 can be attributed to the Dipole arm entirely fabricated from NiCr. Much of the received signal is dissipated. Antenna D7 exhibits a bandwidth of \num{2.7}\,\si{\tera \hertz}, slightly higher than that of the reference (D6) at \num{2.6}\,\si{\tera \hertz}. As with the shorter NiCr segments, the performance loss is concentrated at lower THz frequencies, with higher-frequency reception unaffected. An exceptionally flat spectrum is observed in D7. Between \num{0.2}\,\si{\tera \hertz} and \num{1.5}\,\si{\tera \hertz}, the received Thz power varies by just \num{10}\,\si{\decibel}, compared to \num{25}\,\si{\decibel} in D6. The high DNR of D5 is largely attributed to alignment during measurements. The combination of optimal alignment and reduced roll-off observed in NiCr-modified antennas yield an extended bandwidth of \num{3.8}\,\si{\tera \hertz} compared to \num{2.6}\,\si{\tera \hertz} for the reference. 
+
+The low frequency harmonics (see Figure \ref{comp_d6_d5_d7_time}) that were observed in D6, D8 and D9 (\num{0}\,\si{\micro \meter} NiCr, \num{70}\,\si{\micro \meter} NiCr and \num{240}\,\si{\micro \meter} NiCr, respectively) vanish in antenna D7, where the entire Dipole arm is fabricated from NiCr. In D7, only weak higher-frequency harmonics remain after the main pulse, with no dominant low-frequency oscillation present. The I-shaped Dipole D5 (\num{500}\,\si{\micro \meter} NiCr) exhibits more pronounced time-harmonic oscillations compared to D6, though at higher frequencies. Both D5 and D7 show substantial damping of low-frequency oscillations.
+
+The spectral data confirm the time-domain observations. D5 exhibits resonant peaks at integer multiples of \num{80}\,\si{\giga \hertz}. The peak-to-peak amplitude of these oscillations in the frequency domain is considerably larger than those of the other resonances observed so far. This pronounced modulation is consistent with the large secondary pulse following the primary pulse observed in the time-domain traces of D5. Antenna D7 shows only a single peak at \num{87}\,\si{\giga \hertz}, where the resonance in the THz source is mirrored to the device. corresponding to the mirrored resonance of the THz source. As seen in the time-domain, D7 displays a largely non-resonant response.
+
+All NiCr-modified I-shaped Dipole antennas exhibit an increased bandwidth compared to the reference. The maximum bandwidth of \num{3.8}\,\si{\tera \hertz} was achieved in D5, featuring NiCr segments of length \num{500}\,\si{\micro \meter} and a resistance of approx. \num{274.6}\,\si{\kilo \ohm}. With packaging, the bandwidth of the devices could be further increased. NiCr does not impact the I-shaped Dipoles performance at higher THz frequencies. While the peak DNR decreases in the NiCr-modified devices, roll-off reduces as well. A notably flat antenna response was observed in antenna D7, featuring NiCr segments of length \num{721.5}\,\si{\micro \meter} and a resistance of approx. \num{396.0}\,\si{\kilo \ohm}. Such flat responses over a broad frequency range may prove beneficial in some applications. 
 
 \begin{figure}[!]
     \centering
@@ -234,20 +256,20 @@ Time-harmonic oscillations are observed in the time-domain traces of antennas D8
     \label{comp_I_dipoles}
 \end{figure}
 
-\subsection{Comparison of H-Dipole, I-Shaped Dipole and Long I-Shaped Dipole}
+% \subsection{Comparison of H-Dipole, I-Shaped Dipole and Long I-Shaped Dipole}
 
-\begin{figure}[ht]
-    \centering
-    \begin{subfigure}[b]{0.49\textwidth}
-        \centering
-        \includegraphics[height=0.6\textwidth]{figures/Results/mainTextComp/D6_H10_D1.1/D6_H10_D1.1_MA_time_norm.pdf}
-        \caption{\centering}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.49\textwidth}
-        \centering
-        \includegraphics[height=0.6\textwidth]{figures/Results/mainTextComp/D6_H10_D1.1/D6_H10_D1.1_spectrum.pdf}
-        \caption{\centering}
-    \end{subfigure}
-    \caption{}
-\end{figure}
+% \begin{figure}[ht]
+%     \centering
+%     \begin{subfigure}[b]{0.49\textwidth}
+%         \centering
+%         \includegraphics[height=0.6\textwidth]{figures/Results/mainTextComp/D6_H10_D1.1/D6_H10_D1.1_MA_time_norm.pdf}
+%         \caption{\centering}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}[b]{0.49\textwidth}
+%         \centering
+%         \includegraphics[height=0.6\textwidth]{figures/Results/mainTextComp/D6_H10_D1.1/D6_H10_D1.1_spectrum.pdf}
+%         \caption{\centering}
+%     \end{subfigure}
+%     \caption{}
+% \end{figure}
