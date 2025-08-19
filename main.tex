@@ -64,6 +64,8 @@
 \usepackage{wrapfig}
 \usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage{svg}
+
 
 
 
@@ -155,9 +157,7 @@ The underlying theory for understanding THz-TDS, the fundamentals of THz generat
 \input{chapters/Theory/padResonances.tex}
 
 \chapter{Antenna Design and Simulation}
-
-The design of an appropriate antenna structure is vital for achieving the desired bandwidth and THz performance. We use the design for a H-Dipole antenna proposed by Uttam Nandi \cite{nandiErAsInAlGaAsPhotoconductors2021} as our reference. From there, NiCr-sections in the antenna feeding strip are added. Different configurations are evaluated. CST Studio Suite is used for the simulations. Design considerations and simulation results are presented in the following.
-
+\input{chapters/Antenna Design and Simulation/intro.tex}
 \section{Pulsed Antenna Design and Simulation}
 \input{chapters/Antenna Design and Simulation/design.tex}
 
@@ -174,9 +174,9 @@ A semiconducting wafer available at the institute was selected for its suitabili
 
 \chapter{Results and Discussion}
 
-The setup used for measuring THz radiation using a pulsed system is presented in the following. Steps taken for data analysis are outlined. The antennas are DC characterized, before the effect of NiCr on antenna performance is evaluated based on important performance factors such as bandwidth, SNR or ringing. 
+The setup used for measuring THz radiation using a pulsed system is presented in the following. Steps taken for data analysis are outlined. The antennas are DC characterized, before the effect of NiCr on antenna performance is evaluated based on important performance factors such as bandwidth or DNR. 
 
-\section{THz TDS Measurement Setup}
+\section{THz-TDS and Data Analysis}
 \label{setup}
 \input{chapters/results/TDS_setup.tex}
 
@@ -185,10 +185,13 @@ The setup used for measuring THz radiation using a pulsed system is presented in
 
 
 \chapter{Summary and Outlook}
+\input{chapters/summ_outlook.tex}
 
 \appendix
 \chapter{Full Measurement Data}
 \input{chapters/appendix/appendix.tex}
+\chapter{Full Simulation Data}
+\input{chapters/appendix/appendix_sim.tex}
 
 \printbibliography
 
