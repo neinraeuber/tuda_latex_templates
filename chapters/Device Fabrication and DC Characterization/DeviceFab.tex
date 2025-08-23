@@ -2,7 +2,7 @@ The device fabrication consists of four main processes. Included in these proces
 
 \section{CrAu Structure Lithography and Deposition of CrAu}
 
-\begin{figure}[!]
+\begin{figure}[!tbp]
     \centering
     \begin{subfigure}[b]{0.21\textwidth}
         \centering
@@ -78,15 +78,17 @@ By mesa etching, the active InGaAs layer is removed from the entire sample excep
 
 This step is similar to the metal deposition of Au and Cr. The desired structures are imprinted onto the sample through photo-lithography. The imprinted structures are the missing parts of the feeding strips connecting antenna pads and electrodes. Good contact between the NiCr-strip and the AuCr-strip is vital. Otherwise, THz performance will decrease drastically. We spin coat the sample with nLof 2035 at \num{4000} rpm. The sample is soft baked, exposed to UV light and developed using AZ MIF 726. Left behind are the missing parts of the antenna feeding strips, ready for NiCr deposition.
 
-A \num{80}/\num{20} NiCr alloy is deposited onto the sample using flash evaporation. Flash evaporation of \num{80}/\num{20} NiCr involves the rapid heating of the alloy in an evacuated environment (around $10^{-9}$ \si{\bar}). NiCr has a high melting point around \num{1450} \si{\celsius}. The alloy has to be heated rapidly to avoid clumps and bulk melting, assuring a thin, uniform NiCr layer on top of the sample. Constantly adjusting the feed rate of the alloy also helps in avoiding bulking. Ideally, the deposition rate should be kept as low as possible. In this work, the rate was kept at around \num{0.3} \si{\angstrom}/\si{\s}. As Nickel and chromium have slightly different melting temperatures it is also vital to make sure that the two metals are evaporated at equal rates.The 80/20 ratio is important to ensure that the NiCr alloy’s conductivity remains within the desired range. Upon reaching its evaporation temperature, the NiCr vaporizes, travels through the vacuum and accumulates on the sample surface.
-\section{Anti-Reflection Coating Deposition}
 \begin{wrapfigure}{r}{0.4\textwidth} % r = right side, 50% of text width
     \centering
     \includegraphics[width=0.39\textwidth]{figures/Fabrication/PCA_after_NiCr.pdf}
     \captionsetup{width=0.375\textwidth} % caption matches image width
-    \caption{Schematic diagram of PCA cross section after NiCr deposition. The overlaps are idealized.}
+    \caption{Schematic diagram of PCA cross section after NiCr deposition. The NiCr overlaps are idealized. Not to scale.  h\textsubscript{Au} $\approx 120$\,\si{\nano \meter}, h\textsubscript{Cr} $\approx 20$\,\si{\nano \meter}, h\textsubscript{NiCr} $\approx 35$\,\si{\nano \meter}}.
     \label{fig:afterFab}
 \end{wrapfigure}
+
+A \num{80}/\num{20} NiCr alloy is deposited onto the sample using flash evaporation. Flash evaporation of \num{80}/\num{20} NiCr involves the rapid heating of the alloy in an evacuated environment (around $10^{-9}$ \si{\bar}). NiCr has a high melting point around \num{1450} \si{\celsius}. The alloy has to be heated rapidly to avoid clumps and bulk melting, assuring a thin, uniform NiCr layer on top of the sample. Constantly adjusting the feed rate of the alloy also helps in avoiding bulking. Ideally, the deposition rate should be kept as low as possible. In this work, the rate was kept at around \num{0.3} \si{\angstrom}/\si{\s}. As Nickel and chromium have slightly different melting temperatures it is also vital to make sure that the two metals are evaporated at equal rates.The 80/20 ratio is important to ensure that the NiCr alloy’s conductivity remains within the desired range. Upon reaching its evaporation temperature, the NiCr vaporizes, travels through the vacuum and accumulates on the sample surface. Approx. \num{35}\,\si{\nano \meter} of NiCR are deposited onto the sample. 
+\section{Anti-Reflection Coating Deposition}
+
 An anti-reflection coating (ARC) is deposited above the active region. The ARC layer improves the absorption of the incoming infrared signal in the active region  \cite{chenAntireflectionImplementationsTerahertz2014} and protects the device from external damage. In the simplest implementation, an ARC consists of a single layer having the thickness of an odd multiple of the quarter-wavelength of the incident light: $d \sim k \frac{\lambda}{4}$. The refractive index of the coating material is chosen to be approximately the geometric mean of the indices of the two surrounding media. This choice ensures that the reflections occurring at the two interfaces are equal in magnitude and offset in phase. This leads to destructive interference and, consequently, reduced reflection (see Figure \ref{fig:fabarc}) \cite{paschottaAntireflectionCoatings2005}. 
 The ARC is fabricated by growing a silicon nitride (Si\textsubscript{3}N\textsubscript{4}) layer on top of the sample via plasma-enhanced chemical vapor deposition (PECVD). Si\textsubscript{3}N\textsubscript{4} has a refractive index of $n_1 \approx 1.89$. We choose a thickness of $d = \frac{1}{4} \frac{\lambda}{n_1}$ for a wavelength of $\lambda = 1550$ \si{\nano \meter}, resulting  in a Si\textsubscript{3}N\textsubscript{4}-thickness of $d \approx 205$ \si{\nano \meter}. The Si\textsubscript{3}N\textsubscript{4}is deposited at a rate of approx. \num{13.5} \si{\nano \meter/\min}. After depositing the Si\textsubscript{3}N\textsubscript{4}, another layer of AZ 1518 HS photoresist is deposited onto the sample to form the required patterns of the Si\textsubscript{3}N\textsubscript{4} over the substrate. The photoresist covers the antenna’s electrode structure and feeding strip but leaves the pads uncovered. Otherwise, measurement of the received signal would not be possible. Photo-lithography is performed to acquire the needed structures. The Si\textsubscript{3}N\textsubscript{4} is etched out from the unprotected areas, exposing the contacting metal pads attached to the antenna. The etching is performed in a PECVD system in reactive ion etching (RIE) mode, using a carbon tetrafluoride (CF\textsubscript{4}) and oxygen (O\textsubscript{2}) plasma to chemically and physically remove the Si\textsubscript{3}N\textsubscript{4}. The unprotected Si\textsubscript{3}N\textsubscript{4} with a thickness of approx. \num{205}\,\si{\nano \meter} is etched in \num{55}\,\si{\s}. After etching of Si\textsubscript{3}N\textsubscript{4} the photoresist is removed by placing the sample in acetone.
 
@@ -115,19 +117,29 @@ The ARC is fabricated by growing a silicon nitride (Si\textsubscript{3}N\textsub
     \caption{Schematic diagram depicting the deposition of an ARC and basic ARC working principle. (a) Silicon nitride deposition using a PECVD machine followed by deposition of a photoresistive layer. The photoresistive layer is transformed into structures covering the active region of the antennas using photo-lithography. (b) The silicon nitride is dry etched using carbon tetrafluoride to create the ARC. (c) Working principle of an ARC: incident light is reflected by the air-ARC interface and the ARC-substrate interface. The reflections destructively interfere. Not to scale.}
 \end{figure}
 
-\section{Dimensions of Processed Antennas}
+\section{Fabricated Antennas}
 
-\begin{itemize}
-    \item umschreiben 
-    \item bilder von antennen aufnehmen !!!
-\end{itemize}
+Based on the simulation results from Chapter~3, a set of H-Dipole and I-shaped Dipole antennas was
+fabricated. In total, 10 H-Dipoles and 13 I-Dipoles were processed, each differing in the length of the NiCr segment integrated into the feeding lines (Dipole arms). The variation of $l_{\mathrm{NiCr}}$ allows for a systematic study of how resistive damping influences the antenna response. Tables \ref{tab:h-dipole} and \ref{tab:i-dipole} summarize the fabricated geometries.
 
-\begin{figure}[htbp]
-    \begin{subtable}[c]{0.45\textwidth}
+All antennas share a common strip width of \SI{5}{\micro\meter}. The square read-out pads measure
+\SI{196}{\micro\meter} $\times$ \SI{196}{\micro\meter}, consistent across all devices. For both H-Dipoles and I-shaped Dipoles,
+the nominal total strip length was designed to be \SI{1900}{\micro\meter}, corresponding to an effective strip length of \SI{1508}{\micro\meter} between the pads. One exception was fabricated in the I-shaped Dipole series: a device without NiCr modification but with an intentionally extended strip length of
+\SI{4508}{\micro\meter}, providing an additional reference for comparison.
+
+Several practical limitations during device fabrication must be acknowledged. The deposition of NiCr proved challenging. Minor alignment errors between the CrAu and NiCr segments cannot be ruled out, potentially increasing the effective resistance through larger contact resistances. To ensure contact between CrAu and NiCr, the NiCr segments were fabricated with slight overlaps. These overlaps could also influence the effective resistance through an influence on contact resistance. NiCr evaporation involved a tradeoff between achievable layer thickness and maintaining a uniform sheet resistance. The deposition rate was kept as low as possible, but variations were not excludable, which may have led to slight non-uniformities in the thin-film NiCr alloy. These factors highlight the inherent challenges of fabrication and should be considered when comparing simulations with experimental results. Nevertheless, the fidelity of the fabricated structures is sufficient to ensure that the observed trends meaningfully validate the NiCr damping concept.Microscope images of representative devices are shown in Fig.~\ref{fig:hdipol_real} and
+Fig.~\ref{fig:idipol_real}. The bright metallic CrAu regions and the darker NiCr feeding segments are
+clearly distinguishable. The successful integration of the NiCr segments needs to be confirmed by DC characterizing the fabricated devices. 
+
+
+\begin{table}[!]
+    \centering
+    % First table
+    \begin{minipage}{0.45\textwidth}
         \centering
         \begin{tabular}{l|l|l}
         \toprule
-        Sample(s) & l\textsubscript{NiCr} [$\mu m$] & l\textsubscript{CrAu} [$\mu m$] \\
+        Sample(s) & $l_{\text{NiCr}}$ [$\mu$m] & $l_{\text{CrAu}}$ [$\mu$m] \\
         \midrule
         H5, H9, H10 & 0 & 751.5 \\
         H4 & 5 & 746.5 \\
@@ -138,28 +150,106 @@ The ARC is fabricated by growing a silicon nitride (Si\textsubscript{3}N\textsub
         \bottomrule
         \end{tabular}
         \caption{\centering H-Dipole Dimensions}
-        \label{tab:table}
-    \end{subtable}
-    \hspace{0.1em}
-    \begin{subtable}[c]{0.45\textwidth}
+        \label{tab:h-dipole}
+    \end{minipage}
+    \hspace{0.05\textwidth} % horizontal space between tables
+    % Second table
+    \begin{minipage}{0.45\textwidth}
         \centering
         \begin{tabular}{l|l|l}
         \toprule
-        Sample(s) & l\textsubscript{NiCr} [$\mu m$] & l\textsubscript{CrAu} [$\mu m$] \\
+        Sample(s) & $l_{\text{NiCr}}$ [$\mu$m] & $l_{\text{CrAu}}$ [$\mu$m] \\
         \midrule
         D1, D6 & 0 & 751.5 \\
         D3, D8 & 70 & 701.5 \\
         D4, D9 & 240 & 511.5 \\
         D5, D10 & 500 & 251.5 \\
         D2, D7 & 721.5 & 30 \\
+        D1.1, D1.2, D1.3 & 0 & 2254 \\
         \bottomrule
         \end{tabular}
         \caption{\centering I-shaped Dipole Dimensions}
-        \label{tab:table}
-    \end{subtable}
-    \caption{}
-    \label{fig:sim_dimensions}
+        \label{tab:i-dipole}
+    \end{minipage}
+\end{table}
+
+\begin{figure}[!]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/Aufnahme-154341-0001.PDF.jpg}
+        \caption{\centering H-Dipole with short NiCr segment.}
+        \label{fig:hdipol_real}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/Aufnahme I Dipol.jpg}
+        \caption{\centering I-shaped Dipole with extended NiCr feed.}
+        \label{fig:idipol_real}
+    \end{subfigure}
+    \caption{\centering Microscope images of fabricated antennas. (a) Image of H-Dipole. (b) Image of I-shaped Dipole.}
 \end{figure}
+% \begin{itemize}
+%     \item umschreiben 
+%     \item bilder von antennen aufnehmen !!!
+% \end{itemize}
 
-We present the dimensions of the processed H-Dipole and I-shaped Dipole antennas based on the performed simulations. In total, 11 H-Dipole antennas and 13 I-shaped Dipole antennas are processed, partly differing in geometry. Table \ref{} displays the fabricated antennas and their corresponding dimensions important for this work. All of the processed antennas exhibit a strip width of \num{5}\,\si{\micro \meter}. All read-out pads are fabricated as squares, measuring \num{196}\,\si{\micro \meter} $\times$ \num{196}\,\si{\micro \meter}. The total strip length of H-Dipoles and I-shaped Dipoles measures \num{1900}\,\si{\micro \meter}, resulting in an effective strip length of \num{1508}\,\si{\micro \meter} in between the pads. One exception to this rule is an I-shaped Dipole antenna fabricated without adding any NiCr but with increased effective strip length measuring \num{4508}\,\si{\micro \meter}.
+% \begin{figure}[htbp]
+%     \begin{subtable}[c]{0.45\textwidth}
+%         \centering
+%         \begin{tabular}{l|l|l}
+%         \toprule
+%         Sample(s) & l\textsubscript{NiCr} [$\mu m$] & l\textsubscript{CrAu} [$\mu m$] \\
+%         \midrule
+%         H5, H9, H10 & 0 & 751.5 \\
+%         H4 & 5 & 746.5 \\
+%         H1, H2 & 10 & 741.5 \\
+%         H6 & 15 & 736.5 \\
+%         H3, H8 & 70 & 701.5 \\
+%         H7 & 240 & 511.5 \\
+%         \bottomrule
+%         \end{tabular}
+%         \caption{\centering H-Dipole Dimensions}
+%         \label{tab:table}
+%     \end{subtable}
+%     \hspace{0.1em}
+%     \begin{subtable}[c]{0.45\textwidth}
+%         \centering
+%         \begin{tabular}{l|l|l}
+%         \toprule
+%         Sample(s) & l\textsubscript{NiCr} [$\mu m$] & l\textsubscript{CrAu} [$\mu m$] \\
+%         \midrule
+%         D1, D6 & 0 & 751.5 \\
+%         D3, D8 & 70 & 701.5 \\
+%         D4, D9 & 240 & 511.5 \\
+%         D5, D10 & 500 & 251.5 \\
+%         D2, D7 & 721.5 & 30 \\
+%         \bottomrule
+%         \end{tabular}
+%         \caption{\centering I-shaped Dipole Dimensions}
+%         \label{tab:table}
+%     \end{subtable}
+%     \caption{}
+%     \label{fig:sim_dimensions}
+% \end{figure}
 
+% We present the dimensions of the processed H-Dipole and I-shaped Dipole antennas based on the performed simulations. In total, 11 H-Dipole antennas and 13 I-shaped Dipole antennas are processed, partly differing in geometry. Table \ref{} displays the fabricated antennas and their corresponding dimensions important for this work. All of the processed antennas exhibit a strip width of \num{5}\,\si{\micro \meter}. All read-out pads are fabricated as squares, measuring \num{196}\,\si{\micro \meter} $\times$ \num{196}\,\si{\micro \meter}. The total strip length of H-Dipoles and I-shaped Dipoles measures \num{1900}\,\si{\micro \meter}, resulting in an effective strip length of \num{1508}\,\si{\micro \meter} in between the pads. One exception to this rule is an I-shaped Dipole antenna fabricated without adding any NiCr but with increased effective strip length measuring \num{4508}\,\si{\micro \meter}.
+
+% \begin{figure}[!]
+%     \centering
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{figures/Aufnahme-154341-0001.PDF.jpg}
+%         \caption{\centering}
+%         \label{fig:hdipol_real}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{figures/Aufnahme I Dipol.jpg}
+%         \caption{\centering}
+%         \label{fig:idipol_real}
+%     \end{subfigure}
+%     \caption{}
+% \end{figure}

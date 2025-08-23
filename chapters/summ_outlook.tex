@@ -1,0 +1,57 @@
+\section{Summary}
+
+\noindent
+The objective of this thesis was to investigate strategies for suppressing parasitic low-frequency resonances in
+photoconductive antennas (PCAs), which are a limiting factor in terahertz time-domain spectroscopy (THz-TDS).
+These resonances, originating from the metallic contact pads and finite feeding strips, manifest as oscillations
+in the time-domain and sharp spectral peaks around 50–100\,GHz, thereby masking broadband information
+and reducing the usable bandwidth of PCA-based systems.
+
+\noindent
+A detailed analysis of the resonance mechanism was carried out through simulations of a reference H-Dipole
+geometry. It was shown that the large read-out pads and feeding strips act as resonant structures that couple to
+long-wavelength currents. To mitigate these effects, resistive NiCr segments were introduced into the feeding
+lines. Simulations demonstrated that these segments effectively damp the unwanted low-frequency currents,
+while leaving the high-frequency response around 1\,THz essentially unaffected. Radiation impedance analysis
+further confirmed that NiCr-modified antennas exhibit a flatter and broader spectral response compared to the
+reference design.
+
+\noindent
+Based on these designs, a series of H-Dipole and I-shaped Dipole antennas with varying NiCr lengths was
+fabricated. The structures were characterized by THz-TDS. The experimental results validated the simulation
+predictions: antennas with longer NiCr sections showed a marked reduction of parasitic oscillations in the
+time-domain as well as smoother frequency spectra. A trade-off between resonance suppression and absolute
+signal amplitude was observed, reflecting the resistive damping mechanism. Despite fabrication tolerances
+such as lithography deviations and variations in NiCr sheet resistance, the overall agreement between
+simulation and measurement confirms the effectiveness of the proposed approach.
+
+\section{Outlook}
+
+\noindent
+The results of this work demonstrate that the introduction of resistive NiCr segments provides a simple yet
+powerful means of suppressing parasitic pad resonances in photoconductive antennas. At the same time, the
+study highlights several aspects that should be addressed in future research:
+
+\begin{itemize}
+    \item \textbf{Optimization of resistance:} A systematic parametric study of NiCr thickness, sheet resistance,
+    and segment length could identify the optimal trade-off between resonance suppression and signal amplitude.
+    
+    \item \textbf{Alternative antenna geometries:} The concept should be extended to broadband designs such as
+    bow-tie, log-periodic, or spiral antennas to assess its general applicability.
+    
+    \item \textbf{Advanced materials:} Other resistive materials (e.g. TiN, amorphous carbon, graphene) may
+    offer improved tunability, lower parasitic losses, or more stable fabrication processes compared to NiCr.
+    
+    \item \textbf{Integration with device design:} Combining resistive feeds with other mitigation strategies, such
+    as optimized pad geometry or dielectric matching layers, could yield further performance gains.
+    
+    \item \textbf{Application perspective:} Improved PCA bandwidth directly benefits THz spectroscopy and
+    imaging applications, particularly in areas where both low- and high-frequency components are critical,
+    such as material characterization, non-destructive testing, and high-speed wireless communications.
+\end{itemize}
+
+\noindent
+In summary, this thesis shows that resistive NiCr feeding segments are a viable approach for eliminating
+parasitic resonances in photoconductive antennas. The findings provide both a conceptual foundation and
+experimental validation, offering a pathway towards more robust, broadband, and application-ready THz
+systems.

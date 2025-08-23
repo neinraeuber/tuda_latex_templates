@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="279.14432mm"
+   width="264.60309mm"
    height="105.69585mm"
-   viewBox="0 0 279.14432 105.69585"
+   viewBox="0 0 264.60309 105.69585"
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25)"
@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.50385835"
-     inkscape:cx="390.9829"
-     inkscape:cy="79.387391"
+     inkscape:zoom="0.37511235"
+     inkscape:cx="494.51851"
+     inkscape:cy="247.92572"
      inkscape:window-width="1472"
      inkscape:window-height="815"
      inkscape:window-x="0"
@@ -177,12 +177,76 @@
        apply_with_weight="true"
        only_selected="false"
        uniform="false" />
+    <marker
+       style="overflow:visible"
+       id="ArrowWide-9-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path3-3-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker4-7-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path4-4-4" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2-8-1"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1-4-5"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
   </defs>
   <g
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-18.874893,-101.89941)">
+     transform="translate(-23.074594,-101.89941)">
     <rect
        style="fill:#008000;stroke:#000000;stroke-width:1.00007;stroke-dasharray:none"
        id="rect1"
@@ -194,9 +258,23 @@
        style="fill:#efbf04;fill-opacity:1;stroke:#000000;stroke-width:1.00007;stroke-dasharray:none"
        id="rect1-3"
        width="108.99993"
-       height="38.999931"
+       height="29.083122"
        x="51.733791"
        y="124.18887" />
+    <rect
+       style="fill:#d8dbde;fill-opacity:1;stroke:#000000;stroke-width:1.00007;stroke-dasharray:none"
+       id="rect1-3-8"
+       width="108.99993"
+       height="9.9999304"
+       x="51.733791"
+       y="153.27245" />
+    <rect
+       style="fill:#d8dbde;fill-opacity:1;stroke:#000000;stroke-width:1.00007;stroke-dasharray:none"
+       id="rect1-3-8-2"
+       width="8.9999304"
+       height="9.9999304"
+       x="241.7338"
+       y="153.27245" />
     <rect
        style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1.00007;stroke-dasharray:none"
        id="rect1-3-1"
@@ -245,7 +323,7 @@
        style="fill:#efbf04;fill-opacity:1;stroke:#000000;stroke-width:1.00007;stroke-dasharray:none"
        id="rect1-3-5"
        width="8.9999304"
-       height="38.999931"
+       height="29.08293"
        x="241.7338"
        y="124.18887" />
     <text
@@ -270,6 +348,17 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
          x="97.575859"
          y="111.93118">Au</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;line-height:0;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none"
+       x="79.945343"
+       y="200.90813"
+       id="text1-4-1"><tspan
+         sodipodi:role="line"
+         id="tspan1-0-10"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+         x="79.945343"
+         y="200.90813">Cr</tspan></text>
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.852657;stroke-dasharray:none;stroke-opacity:1"
        d="m 134.75753,92.072554 c 0,-6.585011 0,-13.170019 0,-19.75503"
@@ -284,6 +373,13 @@
        inkscape:path-effect="#path-effect1-4"
        inkscape:original-d="m 134.75753,92.072554 c 0,-6.585011 0,-13.170019 0,-19.75503"
        transform="matrix(1.2710099,0,0,1.2710099,-65.044396,22.290234)" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.635851;stroke-dasharray:none;stroke-opacity:1"
+       d="m 134.75753,92.072554 c 0,-6.585011 0,-13.170019 0,-19.75503"
+       id="path1-4-28"
+       inkscape:path-effect="#path-effect1-4-5"
+       inkscape:original-d="m 134.75753,92.072554 c 0,-6.585011 0,-13.170019 0,-19.75503"
+       transform="matrix(1.5726945,0,0,1.5726945,-124.22706,44.676458)" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;line-height:0;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none"
@@ -299,15 +395,15 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;line-height:0;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none"
        x="260.14224"
-       y="155.05586"
+       y="157.97005"
        id="text1-4-6-0"><tspan
          sodipodi:role="line"
          id="tspan1-0-1-6"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
          x="260.14224"
-         y="155.05586">h<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub"
-   id="tspan5">NiCr</tspan></tspan></text>
+         y="157.97005">h<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan7">NiCr</tspan></tspan></text>
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.786776;stroke-dasharray:none;stroke-opacity:1"
        d="m 134.75753,92.072554 c 0,-6.585011 0,-13.170019 0,-19.75503"
@@ -321,27 +417,46 @@
        id="path2"
        inkscape:path-effect="#path-effect2"
        inkscape:original-d="m 242.67283,39.763808 c 0,6.362208 0,12.724416 0,19.086626"
-       transform="translate(13.501991,101.88172)" />
+       transform="translate(13.501991,104.76435)" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;line-height:0;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none"
-       x="18.593628"
-       y="147.5739"
+       x="22.793329"
+       y="142.45547"
        id="text1-4-6-0-4"><tspan
          sodipodi:role="line"
          id="tspan1-0-1-6-0"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
-         x="18.593628"
-         y="147.5739">h<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub"
+         x="22.793329"
+         y="142.45547">h<tspan
+   style="font-size:65%;baseline-shift:sub"
    id="tspan6">Au</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.77px;line-height:0;font-family:Charter;-inkscape-font-specification:'Charter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none"
+       x="23.620716"
+       y="162.53468"
+       id="text1-4-6-0-4-8"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="23.620716"
+         y="162.53468">h<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan3">Cr</tspan></tspan></text>
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.558833;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ArrowWide-9);marker-end:url(#marker4-7)"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.696672;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ArrowWide-9);marker-end:url(#marker4-7)"
        d="m 242.67283,39.763808 c 0,6.362208 0,12.724416 0,19.086626"
        id="path2-7"
        inkscape:path-effect="#path-effect2-8"
        inkscape:original-d="m 242.67283,39.763808 c 0,6.362208 0,12.724416 0,19.086626"
-       transform="matrix(1.7894425,0,0,1.7894425,-387.95637,55.456579)" />
+       transform="matrix(1.435396,0,0,1.435396,-302.03889,67.769929)" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.16047;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ArrowWide-9-2);marker-end:url(#marker4-7-9)"
+       d="m 242.67283,39.763808 c 0,6.362208 0,12.724416 0,19.086626"
+       id="path2-7-7"
+       inkscape:path-effect="#path-effect2-8-1"
+       inkscape:original-d="m 242.67283,39.763808 c 0,6.362208 0,12.724416 0,19.086626"
+       transform="matrix(0.46286228,0,0,0.46286228,-66.031386,135.8137)" />
     <text
        xml:space="preserve"
        style="font-size:14.77px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"

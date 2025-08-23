@@ -1,15 +1,5 @@
-% Simulations were mainly performed by reusing the simulation file proposed in \cite{nandiErAsInAlGaAsPhotoconductors2021} as a reference for this work. We then replace some part of the original antenna feeding strips by NiCr. The basic simulation steps will be outlined as a short review of \cite{nandiErAsInAlGaAsPhotoconductors2021}. Only H-Dipole antennas are simulated. Simulations of H-Dipole antennas with different NiCr configurations also give insight into the expected behavior of I-shaped Dipole antennas. 
-
-% The H-Dipole antennas are deposited on the active photoconducting material ($\sim$ \num{1.5} \si{\micro\meter}). Below the active material sits a semi-insulating InP substrate ($\sim$ \num{500} \si{\micro\meter}). Additionally, a hyper-hemispherical silicon lense with a radius of \num{6.1} \si{\milli\meter} is attached to the substrate for efficient out-coupling of the generated THz signal. Simulating the entire structure including the silicon lense would not be feasible as too much computational power would be needed. The simulation is simplified by using a technique described in  ref. \cite{llombartTHzTimeDomainSensing2012,garufoNortonEquivalentCircuit2018}. The antenna is positioned at the air–substrate interface, where the \enquote{open add space} boundary condition is applied in CST. All other boundaries use the \enquote{open} condition, which absorbs electromagnetic radiation and mimics an infinitely extended medium. Figure \ref{fig:ref_sim} shows the topology of the reference antenna structure used in the simulation. The substrate thickness is set to at least one wavelength across all relevant frequencies. A lumped element port is used to excite the on-substrate H-dipole antenna. For reliable results, the port dimensions should be at least five times smaller than the effective wavelength. As we only investigate THz performance up to \num{1} \si{\tera\hertz}, this criterion should always be fulfilled. Simulations are performed at two distinct frequencies: \num{100} \si{\giga \hertz} and \num{1} \si{\tera\hertz}. Field monitors are set up at these distinct frequencies to capture the electromagnetic field distribution along the antenna. A monitor for the electrical field, as well as the magnetic field and surface current is implemented. 
-% The field distributions are simulated using the time-domain solver with a hexahedral mesh and accuracy up to \num{-30} \si{\decibel}. The time-domain solver calculates Maxwell's equations in the time-domain using finite integration technique (FIT).
-
-% The reference antenna topology is used to evaluate the THz performance of NiCr-induced feeding strips. Additionally to the described topology, NiCr properties are added. We start by defining NiCr's material properties. NiCr is defined as an ohmic sheet with a resistance of \num{22} \si{\ohm/sq}. 
-
-% In the reference H-Dipole topology, the deposited metal is defined as perfectly electrically conducting (PEC). This is sufficient for simulation purposes as gold can be approximated as a perfect conductor of electricity. Some part of the PEC in the antenna feeding strip is now replaced by NiCr. We start inducing the NiCr at the antenna's electrodes. This means that the longer the NiCr-strip, the closer it is to the antenna's pads. Figure \ref{fig:nicr_sim} shows an example for a H-Dipole antenna where some part of it's feeding structure is replaced by NiCr. 
-
-% The length $l_{NiCr}$ of the NiCr strip defines its resistance, as $R_{NiCr} \propto l_{NiCr}$. This is why multiple configurations have to be simulated to choose appropriate lengths for processing. 
-
-The simulations in this work are primarily based on a simulation proposed in \cite{nandiErAsInAlGaAsPhotoconductors2021}, which serves as the reference for all further investigations. Most simulation steps are adapted from \cite{nandiErAsInAlGaAsPhotoconductors2021}. The original simulation file is reused and adapted, with modifications to the antenna feeding structure to incorporate NiCr strips. All simulations are limited to H-Dipole antennas. While only H-Dipoles are explicitly simulated, the results offer insight into the expected behavior of I-shaped Dipole antennas due to their structural similarities. 
+The pad resonances discussed in Chapter~2 provide the main motivation for modifying the antenna feeding structure with resistive elements. To evaluate this concept systematically, a well-established H-Dipole
+antenna design proposed in \cite{nandiErAsInAlGaAsPhotoconductors2021} is used as the reference geometry. Building upon this baseline, NiCr segments are selectively introduced into the antenna feeds in order to damp low-frequency surface currents. In the following, the design of the reference H-Dipole, the NiCr modifications and the simulation parameters are described. Only H-Dipoles are explicitly simulated. The results offer insight into the expected behavior of I-shaped Dipole antennas due to their structural similarities. 
 
 \subsection{Design of Reference Antenna}
 
@@ -17,7 +7,7 @@ The reference antenna design consists of a metallic H-Dipole deposited on an act
 
 The substrate thickness is set to be at least one wavelength across all relevant frequencies, ensuring realistic far-field behavior. The antenna is excited via a discrete port placed directly on the substrate. To maintain accuracy, the port dimensions are chosen to be at least five times smaller than the effective wavelength, which holds true for all frequencies up to \num{1} \si{\tera\hertz} considered here. The dimensions used for the H-Dipole antenna can be taken from Figure \ref{fig:sim_dimensions}. The deposited metal in the reference antenna is modeled as a perfectly electrically conducting (PEC) material. This approximation is valid, as gold is commonly used for THz antenna fabrication. Gold can be treated as a perfect conductor in the simulation frequency range.
 
-\begin{figure}[htbp]
+\begin{figure}[!]
     \centering
         \begin{subfigure}[c]{0.45\textwidth}
         \centering
@@ -40,7 +30,7 @@ The substrate thickness is set to be at least one wavelength across all relevant
         l\textsubscript{PEC} & var. \\
         \bottomrule
         \end{tabular}
-        \label{tab:table}
+        \label{tab:table1}
     \end{subtable}
     \caption{Important antenna dimensions used for simulation of H-Dipoles. l\textsubscript{NiCr} is set to zero when simulating the reference H-Dipole antenna.}
     \label{fig:sim_dimensions}
